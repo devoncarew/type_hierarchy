@@ -209,14 +209,23 @@ class TypeBuilder {
 
     if (widget.parent != null) m['parent'] = widget.parent.name;
     if (widget.abstract) m['abstract'] = widget.abstract;
+    if (widget.hasDocumentation) m['docs'] = _docSummary(widget.documentation);
 
-    if (widget.hasDocumentation) {
-      m['docs'] = _docSummary(widget.documentation);
+    if (widget.properties.isNotEmpty) {
+      m['properties'] = widget.properties.map((FlutterProperty property) {
+        Map map = {
+          'name': property.name,
+          'type': property.type
+        };
+        if (!property.isFinal) map['mutable'] = !property.isFinal;
+        if (property.hasDocumentation) {
+          map['docs'] = _docSummary(property.documentation);
+        }
+        return map;
+      }).toList();
     }
 
-    // TODO: Write properties.
     // TODO: Write children?
-    // TODO: Write doc summaries?
 
     return m;
   }
@@ -246,8 +255,13 @@ class FlutterType {
 
   FlutterType _parent;
   final List<FlutterType> _children = [];
+  List<FlutterProperty> _properties = [];
 
-  FlutterType(this.package, this.type);
+  FlutterType(this.package, this.type) {
+    _properties = type.fields.map((FieldElement field) {
+      return new FlutterProperty(field);
+    }).toList();
+  }
 
   bool get abstract => type.isAbstract;
 
@@ -265,6 +279,8 @@ class FlutterType {
   }
 
   String get name => type.name;
+
+  List<FlutterProperty> get properties => _properties;
 
   FlutterType get parent => _parent;
 
@@ -288,6 +304,27 @@ class FlutterType {
   String toString() => type.name;
 }
 
+class FlutterProperty {
+  final FieldElement _field;
+
+  FlutterProperty(this._field);
+
+  String get name => _field.name;
+  String get type => _field.type.name;
+  bool get isFinal => _field.isFinal;
+
+  bool get hasDocumentation => _field.documentationComment != null;
+
+  String get documentation {
+    return _field.documentationComment
+      .split('\n')
+      .map((s) => _removeComments(s))
+      .map((s) => s.trim())
+      .join('\n')
+      .trim();
+  }
+}
+
 String _docSummary(String docs) {
   if (docs == null) return null;
 
@@ -301,6 +338,7 @@ String _removeComments(String s) {
   if (s.startsWith('///')) return s.substring(3);
   if (s.startsWith('/*')) return s.substring(2);
   if (s.startsWith(' *')) return s.substring(2);
+  if (s.startsWith('*')) return s.substring(1);
   if (s.endsWith('*/')) return s.substring(0, s.length - 2);
 
   return s;
