@@ -160,9 +160,9 @@ class TypeBuilder {
     }
 
     for (FlutterType type in types) {
-      if (childMap[type.type] == null) continue;
-
       type._parent = findType(type.type.supertype?.element?.name);
+
+      if (childMap[type.type] == null) continue;
 
       for (ClassElement child in childMap[type.type]) {
         FlutterType flutterChild = findType(child.name);
@@ -187,10 +187,10 @@ class TypeBuilder {
   }
 
   void emitJson(List<FlutterType> widgets) {
-    List data = [];
+    var data = {};
 
     for (FlutterType widget in widgets) {
-      data.add(_widgetToMap(widget));
+      data[widget.name] = _widgetToMap(widget);
     }
 
     JsonEncoder encoder = new JsonEncoder.withIndent('  ');
@@ -209,6 +209,14 @@ class TypeBuilder {
 
     if (widget.parent != null) m['parent'] = widget.parent.name;
     if (widget.abstract) m['abstract'] = widget.abstract;
+
+    if (widget.hasDocumentation) {
+      m['docs'] = _docSummary(widget.documentation);
+    }
+
+    // TODO: Write properties.
+    // TODO: Write children?
+    // TODO: Write doc summaries?
 
     return m;
   }
@@ -245,6 +253,17 @@ class FlutterType {
 
   bool get private => type.name.startsWith('_');
 
+  bool get hasDocumentation => type.documentationComment != null;
+
+  String get documentation {
+    return type.documentationComment
+      .split('\n')
+      .map((s) => _removeComments(s))
+      .map((s) => s.trim())
+      .join('\n')
+      .trim();
+  }
+
   String get name => type.name;
 
   FlutterType get parent => _parent;
@@ -267,4 +286,22 @@ class FlutterType {
   }
 
   String toString() => type.name;
+}
+
+String _docSummary(String docs) {
+  if (docs == null) return null;
+
+  return docs
+    .split('\n')
+    .takeWhile((s) => s.isNotEmpty)
+    .join(' ');
+}
+
+String _removeComments(String s) {
+  if (s.startsWith('///')) return s.substring(3);
+  if (s.startsWith('/*')) return s.substring(2);
+  if (s.startsWith(' *')) return s.substring(2);
+  if (s.endsWith('*/')) return s.substring(0, s.length - 2);
+
+  return s;
 }

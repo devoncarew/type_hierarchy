@@ -1,534 +1,829 @@
-[
-  {
+{
+  "BottomSheet": {
     "name": "BottomSheet",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "Card": {
     "name": "Card",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent",
+    "docs": "A material design card"
   },
-  {
+  "Checkbox": {
     "name": "Checkbox",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent",
+    "docs": "A material design checkbox"
   },
-  {
+  "Chip": {
     "name": "Chip",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "CircleAvatar": {
     "name": "CircleAvatar",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "CircularProgressIndicator": {
     "name": "CircularProgressIndicator",
-    "package": "material"
+    "package": "material",
+    "parent": "ProgressIndicator"
   },
-  {
+  "DatePicker": {
     "name": "DatePicker",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "DayPicker": {
     "name": "DayPicker",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "Dialog": {
     "name": "Dialog",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent",
+    "docs": "A material design dialog"
   },
-  {
+  "Drawer": {
     "name": "Drawer",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "DrawerController": {
     "name": "DrawerController",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "DrawerDivider": {
     "name": "DrawerDivider",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "DrawerHeader": {
     "name": "DrawerHeader",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "DrawerItem": {
     "name": "DrawerItem",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "DropDownButton": {
     "name": "DropDownButton",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "DropDownMenuItem": {
     "name": "DropDownMenuItem",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "FlatButton": {
     "name": "FlatButton",
-    "package": "material"
+    "package": "material",
+    "parent": "MaterialButton"
   },
-  {
+  "FloatingActionButton": {
     "name": "FloatingActionButton",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "Icon": {
     "name": "Icon",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "IconButton": {
     "name": "IconButton",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "InkFeatures": {
     "name": "InkFeatures",
-    "package": "material"
+    "package": "material",
+    "parent": "OneChildRenderObjectWidget"
   },
-  {
+  "InkResponse": {
     "name": "InkResponse",
     "package": "material",
     "parent": "StatefulComponent"
   },
-  {
+  "InkWell": {
     "name": "InkWell",
-    "package": "material"
+    "package": "material",
+    "parent": "InkResponse",
+    "docs": "An area of a Material that responds to touch."
   },
-  {
+  "Input": {
     "name": "Input",
-    "package": "material"
+    "package": "material",
+    "parent": "Scrollable"
   },
-  {
+  "LinearProgressIndicator": {
     "name": "LinearProgressIndicator",
-    "package": "material"
+    "package": "material",
+    "parent": "ProgressIndicator"
   },
-  {
+  "ListItem": {
     "name": "ListItem",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "Material": {
     "name": "Material",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent",
+    "docs": "Describes a sheet of Material. If the layout changes (e.g. because there's a list on the paper, and it's been scrolled), a LayoutChangedNotification must be dispatched at the relevant subtree. (This in particular means that Transitions should not be placed inside Material.)"
   },
-  {
+  "MaterialApp": {
     "name": "MaterialApp",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "MaterialButton": {
+    "name": "MaterialButton",
+    "package": "material",
+    "parent": "StatefulComponent",
+    "abstract": true,
+    "docs": "Base class for buttons in the Material theme. Rather than using this class directly, please use FlatButton or RaisedButton."
+  },
+  "MaterialList": {
     "name": "MaterialList",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "MonthPicker": {
     "name": "MonthPicker",
-    "package": "material"
+    "package": "material",
+    "parent": "ScrollableWidgetList"
   },
-  {
+  "PopupMenuItem": {
     "name": "PopupMenuItem",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "ProgressIndicator": {
+    "name": "ProgressIndicator",
+    "package": "material",
+    "parent": "StatefulComponent",
+    "abstract": true
+  },
+  "Radio": {
     "name": "Radio",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "RaisedButton": {
     "name": "RaisedButton",
-    "package": "material"
+    "package": "material",
+    "parent": "MaterialButton"
   },
-  {
+  "Scaffold": {
     "name": "Scaffold",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "Slider": {
     "name": "Slider",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "SnackBar": {
     "name": "SnackBar",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "SnackBarAction": {
     "name": "SnackBarAction",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "Switch": {
     "name": "Switch",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "TabBar": {
     "name": "TabBar",
-    "package": "material"
+    "package": "material",
+    "parent": "Scrollable",
+    "docs": "Displays a horizontal row of tabs, one per label. If isScrollable is true then each tab is as wide as needed for its label and the entire [TabBar] is scrollable. Otherwise each tab gets an equal share of the available space. A [TabBarSelection] widget ancestor must have been built to enable saving and monitoring the selected tab."
   },
-  {
+  "TabBarSelection": {
     "name": "TabBarSelection",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "TabBarView": {
     "name": "TabBarView",
-    "package": "material"
+    "package": "material",
+    "parent": "PageableList"
   },
-  {
+  "TimePicker": {
     "name": "TimePicker",
-    "package": "material"
+    "package": "material",
+    "parent": "StatefulComponent"
   },
-  {
+  "ToolBar": {
     "name": "ToolBar",
-    "package": "material"
+    "package": "material",
+    "parent": "StatelessComponent"
   },
-  {
+  "YearPicker": {
     "name": "YearPicker",
-    "package": "material"
+    "package": "material",
+    "parent": "ScrollableWidgetList"
   },
-  {
+  "Align": {
     "name": "Align",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Aligns its child box within itself."
+  },
+  "AlignTransition": {
+    "name": "AlignTransition",
+    "package": "widgets",
+    "parent": "TransitionWithChild"
+  },
+  "AnimatedContainer": {
+    "name": "AnimatedContainer",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "docs": "A container that gradually changes its values over a period of time."
+  },
+  "AnimatedModalBarrier": {
+    "name": "AnimatedModalBarrier",
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "Prevents the user from interacting with widgets behind itself."
+  },
+  "AspectRatio": {
+    "name": "AspectRatio",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Forces child to layout at a specific aspect ratio."
+  },
+  "AssetImage": {
+    "name": "AssetImage",
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "Displays an image from an [AssetBundle]."
+  },
+  "AsyncImage": {
+    "name": "AsyncImage",
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "Displays an image provided by an [ImageProvider]."
+  },
+  "Baseline": {
+    "name": "Baseline",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Positions its child vertically according to the child's baseline."
+  },
+  "Block": {
+    "name": "Block",
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "A mashup of [ScrollableViewport] and [BlockBody]. Useful when you have a small, fixed number of children that you wish to arrange in a block layout and that might exceed the height of its container (and therefore need to scroll)."
+  },
+  "BlockBody": {
+    "name": "BlockBody",
+    "package": "widgets",
+    "parent": "MultiChildRenderObjectWidget",
+    "docs": "Uses the block layout algorithm for its children."
+  },
+  "Builder": {
+    "name": "Builder",
+    "package": "widgets",
+    "parent": "StatelessComponent"
+  },
+  "BuilderTransition": {
+    "name": "BuilderTransition",
+    "package": "widgets",
+    "parent": "TransitionComponent"
+  },
+  "Center": {
+    "name": "Center",
+    "package": "widgets",
+    "parent": "Align",
+    "docs": "Centers its child within itself."
+  },
+  "ClipOval": {
+    "name": "ClipOval",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Clips its child using an oval."
+  },
+  "ClipRRect": {
+    "name": "ClipRRect",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Clips its child using a rounded rectangle."
+  },
+  "ClipRect": {
+    "name": "ClipRect",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Clips its child using a rectangle."
+  },
+  "ColorTransition": {
+    "name": "ColorTransition",
+    "package": "widgets",
+    "parent": "TransitionWithChild"
+  },
+  "Column": {
+    "name": "Column",
+    "package": "widgets",
+    "parent": "Flex",
+    "docs": "Lays out child elements in a column."
+  },
+  "ConstrainedBox": {
+    "name": "ConstrainedBox",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Imposes additional constraints on its child."
+  },
+  "Container": {
+    "name": "Container",
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "A convenience widget that combines common painting, positioning, and sizing widgets."
+  },
+  "CustomMultiChildLayout": {
+    "name": "CustomMultiChildLayout",
+    "package": "widgets",
+    "parent": "MultiChildRenderObjectWidget",
+    "docs": "Defers the layout of multiple children to a delegate."
+  },
+  "CustomOneChildLayout": {
+    "name": "CustomOneChildLayout",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Defers the layout of its single child to a delegate."
+  },
+  "CustomPaint": {
+    "name": "CustomPaint",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Delegates its painting."
+  },
+  "DecoratedBox": {
+    "name": "DecoratedBox",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Paints a [Decoration] either before or after its child paints."
+  },
+  "Dismissable": {
+    "name": "Dismissable",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "docs": "Can be dismissed by dragging in one or more directions."
+  },
+  "DragTarget": {
+    "name": "DragTarget",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "docs": "Receives data when a [Draggable] widget is dropped."
+  },
+  "Draggable": {
+    "name": "Draggable",
+    "package": "widgets",
+    "parent": "DraggableBase",
+    "docs": "Makes its child draggable starting from tap down."
+  },
+  "DraggableBase": {
+    "name": "DraggableBase",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "abstract": true,
+    "docs": "Subclass this component to customize the gesture used to start a drag."
+  },
+  "EditableText": {
+    "name": "EditableText",
+    "package": "widgets",
+    "parent": "StatefulComponent"
+  },
+  "EnterExitTransition": {
+    "name": "EnterExitTransition",
+    "package": "widgets",
+    "parent": "StatefulComponent"
+  },
+  "ErrorWidget": {
+    "name": "ErrorWidget",
+    "package": "widgets",
+    "parent": "LeafRenderObjectWidget"
+  },
+  "FadeTransition": {
+    "name": "FadeTransition",
+    "package": "widgets",
+    "parent": "TransitionWithChild"
+  },
+  "Flex": {
+    "name": "Flex",
+    "package": "widgets",
+    "parent": "MultiChildRenderObjectWidget",
+    "docs": "Uses the flex layout algorithm for its children."
+  },
+  "Focus": {
+    "name": "Focus",
+    "package": "widgets",
+    "parent": "StatefulComponent"
+  },
+  "FractionallySizedBox": {
+    "name": "FractionallySizedBox",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Sizes itself to a fraction of the total available space."
+  },
+  "GestureDetector": {
+    "name": "GestureDetector",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "docs": "A widget that detects gestures."
+  },
+  "Grid": {
+    "name": "Grid",
+    "package": "widgets",
+    "parent": "MultiChildRenderObjectWidget",
+    "docs": "Uses the grid layout algorithm for its children."
+  },
+  "GridPaper": {
+    "name": "GridPaper",
+    "package": "widgets",
+    "parent": "StatelessComponent"
+  },
+  "Hero": {
+    "name": "Hero",
+    "package": "widgets",
+    "parent": "StatefulComponent"
+  },
+  "IgnorePointer": {
+    "name": "IgnorePointer",
     "package": "widgets",
     "parent": "OneChildRenderObjectWidget"
   },
-  {
-    "name": "AlignTransition",
-    "package": "widgets"
-  },
-  {
-    "name": "AnimatedContainer",
-    "package": "widgets"
-  },
-  {
-    "name": "AnimatedModalBarrier",
-    "package": "widgets"
-  },
-  {
-    "name": "AspectRatio",
-    "package": "widgets"
-  },
-  {
-    "name": "AssetImage",
-    "package": "widgets"
-  },
-  {
-    "name": "AsyncImage",
-    "package": "widgets"
-  },
-  {
-    "name": "Baseline",
-    "package": "widgets"
-  },
-  {
-    "name": "Block",
-    "package": "widgets"
-  },
-  {
-    "name": "BlockBody",
-    "package": "widgets"
-  },
-  {
-    "name": "Builder",
-    "package": "widgets"
-  },
-  {
-    "name": "BuilderTransition",
-    "package": "widgets"
-  },
-  {
-    "name": "Center",
-    "package": "widgets"
-  },
-  {
-    "name": "ClipOval",
-    "package": "widgets"
-  },
-  {
-    "name": "ClipRRect",
-    "package": "widgets"
-  },
-  {
-    "name": "ClipRect",
-    "package": "widgets"
-  },
-  {
-    "name": "ColorTransition",
-    "package": "widgets"
-  },
-  {
-    "name": "Column",
-    "package": "widgets"
-  },
-  {
-    "name": "ConstrainedBox",
-    "package": "widgets"
-  },
-  {
-    "name": "Container",
-    "package": "widgets"
-  },
-  {
-    "name": "CustomMultiChildLayout",
-    "package": "widgets"
-  },
-  {
-    "name": "CustomOneChildLayout",
-    "package": "widgets"
-  },
-  {
-    "name": "CustomPaint",
-    "package": "widgets"
-  },
-  {
-    "name": "DecoratedBox",
-    "package": "widgets"
-  },
-  {
-    "name": "Dismissable",
-    "package": "widgets"
-  },
-  {
-    "name": "DragTarget",
-    "package": "widgets"
-  },
-  {
-    "name": "Draggable",
-    "package": "widgets"
-  },
-  {
-    "name": "EditableText",
-    "package": "widgets"
-  },
-  {
-    "name": "EnterExitTransition",
-    "package": "widgets"
-  },
-  {
-    "name": "ErrorWidget",
-    "package": "widgets"
-  },
-  {
-    "name": "FadeTransition",
-    "package": "widgets"
-  },
-  {
-    "name": "Flex",
-    "package": "widgets",
-    "parent": "MultiChildRenderObjectWidget"
-  },
-  {
-    "name": "Focus",
-    "package": "widgets"
-  },
-  {
-    "name": "FractionallySizedBox",
-    "package": "widgets"
-  },
-  {
-    "name": "GestureDetector",
-    "package": "widgets"
-  },
-  {
-    "name": "Grid",
-    "package": "widgets"
-  },
-  {
-    "name": "GridPaper",
-    "package": "widgets"
-  },
-  {
-    "name": "Hero",
-    "package": "widgets"
-  },
-  {
-    "name": "IgnorePointer",
-    "package": "widgets"
-  },
-  {
+  "IndexedStack": {
     "name": "IndexedStack",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "MultiChildRenderObjectWidget",
+    "docs": "A [Stack] that shows a single child at once."
   },
-  {
+  "IntrinsicHeight": {
     "name": "IntrinsicHeight",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Sizes its child to the child's intrinsic height."
   },
-  {
+  "IntrinsicWidth": {
     "name": "IntrinsicWidth",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Sizes its child to the child's intrinsic width."
   },
-  {
+  "KeyedSubtree": {
     "name": "KeyedSubtree",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatelessComponent"
   },
-  {
+  "LeafRenderObjectWidget": {
+    "name": "LeafRenderObjectWidget",
+    "package": "widgets",
+    "parent": "RenderObjectWidget",
+    "abstract": true,
+    "docs": "A superclass for RenderObjectWidgets that configure RenderObject subclasses that have no children."
+  },
+  "Listener": {
     "name": "Listener",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget"
   },
-  {
+  "LongPressDraggable": {
     "name": "LongPressDraggable",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "DraggableBase",
+    "docs": "Makes its child draggable starting from long press."
   },
-  {
+  "MetaData": {
     "name": "MetaData",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget"
   },
-  {
+  "Mimic": {
     "name": "Mimic",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "A widget that copies the appearance of another widget."
   },
-  {
+  "Mimicable": {
     "name": "Mimicable",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "docs": "A widget that can be copied by a [Mimic]."
   },
-  {
+  "MixedViewport": {
     "name": "MixedViewport",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "RenderObjectWidget"
   },
-  {
+  "ModalBarrier": {
     "name": "ModalBarrier",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "Prevents the user from interacting with widgets behind itself."
   },
-  {
+  "MultiChildRenderObjectWidget": {
+    "name": "MultiChildRenderObjectWidget",
+    "package": "widgets",
+    "parent": "RenderObjectWidget",
+    "abstract": true,
+    "docs": "A superclass for RenderObjectWidgets that configure RenderObject subclasses that have a single list of children. (This superclass only provides the storage for that child list, it doesn't actually provide the updating logic.)"
+  },
+  "Navigator": {
     "name": "Navigator",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatefulComponent"
   },
-  {
+  "NetworkImage": {
     "name": "NetworkImage",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "Displays an image loaded from the network."
   },
-  {
+  "NotificationListener": {
     "name": "NotificationListener",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatelessComponent"
   },
-  {
+  "OffStage": {
     "name": "OffStage",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Lays the child out as if it was in the tree, but without painting anything, without making the child available for hit testing, and without taking any room in the parent."
   },
-  {
+  "OneChildRenderObjectWidget": {
+    "name": "OneChildRenderObjectWidget",
+    "package": "widgets",
+    "parent": "RenderObjectWidget",
+    "abstract": true,
+    "docs": "A superclass for RenderObjectWidgets that configure RenderObject subclasses that have a single child slot. (This superclass only provides the storage for that child, it doesn't actually provide the updating logic.)"
+  },
+  "Opacity": {
     "name": "Opacity",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Makes its child partially transparent."
   },
-  {
+  "OverflowBox": {
     "name": "OverflowBox",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "A render object that imposes different constraints on its child than it gets from its parent, possibly allowing the child to overflow the parent."
   },
-  {
+  "Overlay": {
     "name": "Overlay",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "docs": "A [Stack] of entries that can be managed independently."
   },
-  {
+  "Padding": {
     "name": "Padding",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Insets its child by the given padding."
   },
-  {
+  "PageStorage": {
     "name": "PageStorage",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatelessComponent"
   },
-  {
+  "PageableList": {
     "name": "PageableList",
     "package": "widgets",
     "parent": "Scrollable"
   },
-  {
+  "Placeholder": {
     "name": "Placeholder",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "docs": "A widget whose child can be mutated."
   },
-  {
+  "PositionedTransition": {
     "name": "PositionedTransition",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "TransitionWithChild",
+    "docs": "Animated version of [Positioned]. Only works if it's the child of a [Stack]."
   },
-  {
+  "RawImage": {
     "name": "RawImage",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "LeafRenderObjectWidget",
+    "docs": "Displays a raw image."
   },
-  {
+  "RawImageResource": {
     "name": "RawImageResource",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "docs": "Displays an [ImageResource]."
   },
-  {
+  "RawText": {
     "name": "RawText",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "LeafRenderObjectWidget",
+    "docs": "A raw paragraph of text."
   },
-  {
+  "RenderObjectToWidgetAdapter": {
     "name": "RenderObjectToWidgetAdapter",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "RenderObjectWidget",
+    "docs": "This class provides a bridge from a RenderObject to an Element tree. The given container is the RenderObject that the Element tree should be inserted into. It must be a RenderObject that implements the RenderObjectWithChildMixin protocol. The type argument T is the kind of RenderObject that the container expects as its child."
   },
-  {
+  "RenderObjectWidget": {
+    "name": "RenderObjectWidget",
+    "package": "widgets",
+    "parent": "Widget",
+    "abstract": true,
+    "docs": "RenderObjectWidgets provide the configuration for [RenderObjectElement]s, which wrap [RenderObject]s, which provide the actual rendering of the application."
+  },
+  "RepaintBoundary": {
     "name": "RepaintBoundary",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget"
   },
-  {
+  "RotationTransition": {
     "name": "RotationTransition",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "TransitionWithChild"
   },
-  {
+  "Row": {
     "name": "Row",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "Flex",
+    "docs": "Lays out child elements in a row."
   },
-  {
+  "Scrollable": {
+    "name": "Scrollable",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "abstract": true,
+    "docs": "A base class for scrollable widgets that reacts to user input and generates a scrollOffset."
+  },
+  "ScrollableList": {
     "name": "ScrollableList",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "ScrollableWidgetList",
+    "docs": "A wrapper around [ScrollableWidgetList] that helps you translate a list of model objects into a scrollable list of widgets. Assumes all the widgets have the same height."
   },
-  {
+  "ScrollableMixedWidgetList": {
     "name": "ScrollableMixedWidgetList",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "Scrollable",
+    "docs": "A general scrollable list for a large number of children that might not all have the same height. Prefer [ScrollableWidgetList] when all the children have the same height because it can use that property to be more efficient. Prefer [ScrollableViewport] with a single child."
   },
-  {
+  "ScrollableViewport": {
     "name": "ScrollableViewport",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "Scrollable",
+    "docs": "A simple scrollable widget that has a single child. Use this component if you are not worried about offscreen widgets consuming resources."
   },
-  {
+  "ScrollableWidgetList": {
+    "name": "ScrollableWidgetList",
+    "package": "widgets",
+    "parent": "Scrollable",
+    "abstract": true,
+    "docs": "An optimized scrollable widget for a large number of children that are all the same size (extent) in the scrollDirection. For example for ScrollDirection.vertical itemExtent is the height of each item. Use this widget when you have a large number of children or when you are concerned"
+  },
+  "ShaderMask": {
     "name": "ShaderMask",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget"
   },
-  {
+  "SizeObserver": {
     "name": "SizeObserver",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Calls [onSizeChanged] whenever the child's layout size changes"
   },
-  {
+  "SizedBox": {
     "name": "SizedBox",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "A box with a specified size."
   },
-  {
+  "SizedOverflowBox": {
     "name": "SizedOverflowBox",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget"
   },
-  {
+  "SlideTransition": {
     "name": "SlideTransition",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "TransitionWithChild"
   },
-  {
+  "SmoothlyResizingOverflowBox": {
     "name": "SmoothlyResizingOverflowBox",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatefulComponent"
   },
-  {
+  "SquashTransition": {
     "name": "SquashTransition",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "TransitionWithChild"
   },
-  {
+  "Stack": {
     "name": "Stack",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "MultiChildRenderObjectWidget",
+    "docs": "Uses the stack layout algorithm for its children."
   },
-  {
+  "StatefulBuilder": {
     "name": "StatefulBuilder",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatefulComponent"
   },
-  {
+  "StatefulComponent": {
+    "name": "StatefulComponent",
+    "package": "widgets",
+    "parent": "Widget",
+    "abstract": true,
+    "docs": "StatefulComponents provide the configuration for [StatefulComponentElement]s, which wrap [State]s, which hold mutable state and can dynamically and spontaneously ask to be rebuilt."
+  },
+  "StatelessComponent": {
+    "name": "StatelessComponent",
+    "package": "widgets",
+    "parent": "Widget",
+    "abstract": true,
+    "docs": "StatelessComponents describe a way to compose other Widgets to form reusable parts, which doesn't depend on anything other than the configuration information in the object itself. (For compositions that can change dynamically, e.g. due to having an internal clock-driven state, or depending on some system state, use [StatefulComponent].)"
+  },
+  "StatisticsOverlay": {
     "name": "StatisticsOverlay",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "LeafRenderObjectWidget",
+    "docs": "Displays performance statistics."
   },
-  {
+  "StatusTransitionComponent": {
+    "name": "StatusTransitionComponent",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "abstract": true
+  },
+  "StyledText": {
     "name": "StyledText",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "A convience widget for paragraphs of text with heterogeneous style."
   },
-  {
+  "Text": {
     "name": "Text",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "A run of text."
   },
-  {
+  "Title": {
     "name": "Title",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "StatelessComponent",
+    "docs": "Controls the description of this app in the operating system."
   },
-  {
+  "Transform": {
     "name": "Transform",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Applies a transformation before painting its child."
   },
-  {
+  "TransitionComponent": {
+    "name": "TransitionComponent",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "abstract": true
+  },
+  "TransitionWithChild": {
+    "name": "TransitionWithChild",
+    "package": "widgets",
+    "parent": "TransitionComponent",
+    "abstract": true
+  },
+  "UniqueComponent": {
+    "name": "UniqueComponent",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "abstract": true,
+    "docs": "A widget that has exactly one inflated instance in the tree."
+  },
+  "Viewport": {
     "name": "Viewport",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "A widget that's bigger on the inside."
   },
-  {
+  "WidgetToRenderBoxAdapter": {
     "name": "WidgetToRenderBoxAdapter",
-    "package": "widgets"
+    "package": "widgets",
+    "parent": "LeafRenderObjectWidget",
+    "docs": "An adapter for placing a specific [RenderBox] in the widget tree."
   }
-]
+}
