@@ -5,6 +5,10 @@
     "parent": "StatefulComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "performance",
         "type": "Performance",
         "docs": "The performance that controls the bottom sheet's position. The BottomSheet widget will manipulate the position of this performance, it is not just a passive observer."
@@ -26,6 +30,10 @@
     "docs": "A material design card",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "child",
         "type": "Widget"
       },
@@ -41,6 +49,10 @@
     "parent": "StatelessComponent",
     "docs": "A material design checkbox",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "value",
         "type": "bool"
@@ -61,6 +73,10 @@
     "parent": "StatelessComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "avatar",
         "type": "Widget"
       },
@@ -80,6 +96,10 @@
     "parent": "StatelessComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "label",
         "type": "String"
       },
@@ -96,7 +116,17 @@
   "CircularProgressIndicator": {
     "name": "CircularProgressIndicator",
     "package": "material",
-    "parent": "ProgressIndicator"
+    "parent": "ProgressIndicator",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "value",
+        "type": "double"
+      }
+    ]
   },
   "DatePicker": {
     "name": "DatePicker",
@@ -151,6 +181,10 @@
     "docs": "A material design dialog",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "title",
         "type": "Widget",
         "docs": "The (optional) title of the dialog is displayed in a large font at the top of the dialog."
@@ -181,6 +215,10 @@
     "parent": "StatelessComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "elevation",
         "type": "int"
       },
@@ -196,6 +234,10 @@
     "parent": "StatefulComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "GlobalKey"
+      },
+      {
         "name": "child",
         "type": "Widget"
       }
@@ -204,13 +246,23 @@
   "DrawerDivider": {
     "name": "DrawerDivider",
     "package": "material",
-    "parent": "StatelessComponent"
+    "parent": "StatelessComponent",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      }
+    ]
   },
   "DrawerHeader": {
     "name": "DrawerHeader",
     "package": "material",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget"
@@ -222,6 +274,10 @@
     "package": "material",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "icon",
         "type": "String"
@@ -246,6 +302,10 @@
     "parent": "StatefulComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "items",
         "type": "List"
       },
@@ -269,12 +329,16 @@
     "parent": "StatelessComponent",
     "properties": [
       {
-        "name": "child",
-        "type": "Widget"
+        "name": "key",
+        "type": "Key"
       },
       {
         "name": "value",
         "type": "T"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -284,17 +348,41 @@
     "parent": "MaterialButton",
     "properties": [
       {
-        "name": "color",
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      },
+      {
+        "name": "textTheme",
+        "type": "ButtonColor"
+      },
+      {
+        "name": "textColor",
         "type": "Color"
       },
       {
-        "name": "disabledColor",
+        "name": "disabledTextColor",
+        "type": "Color"
+      },
+      {
+        "name": "color",
         "type": "Color"
       },
       {
         "name": "colorBrightness",
         "type": "ThemeBrightness",
         "docs": "Controls the default text color if the text color isn't explicit set."
+      },
+      {
+        "name": "disabledColor",
+        "type": "Color"
+      },
+      {
+        "name": "onPressed",
+        "type": "VoidCallback"
       }
     ]
   },
@@ -304,6 +392,10 @@
     "parent": "StatefulComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "child",
         "type": "Widget"
       },
@@ -312,16 +404,16 @@
         "type": "Color"
       },
       {
-        "name": "onPressed",
-        "type": "VoidCallback"
-      },
-      {
         "name": "elevation",
         "type": "int"
       },
       {
         "name": "highlightElevation",
         "type": "int"
+      },
+      {
+        "name": "onPressed",
+        "type": "VoidCallback"
       },
       {
         "name": "mini",
@@ -334,6 +426,10 @@
     "package": "material",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "size",
         "type": "IconSize"
@@ -358,6 +454,10 @@
     "parent": "StatelessComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "icon",
         "type": "String"
       },
@@ -381,8 +481,16 @@
     "parent": "OneChildRenderObjectWidget",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "color",
         "type": "Color"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -391,6 +499,10 @@
     "package": "material",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget"
@@ -425,7 +537,33 @@
     "name": "InkWell",
     "package": "material",
     "parent": "InkResponse",
-    "docs": "An area of a Material that responds to touch."
+    "docs": "An area of a Material that responds to touch.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      },
+      {
+        "name": "onTap",
+        "type": "GestureTapCallback"
+      },
+      {
+        "name": "onDoubleTap",
+        "type": "GestureTapCallback"
+      },
+      {
+        "name": "onLongPress",
+        "type": "GestureLongPressCallback"
+      },
+      {
+        "name": "onHighlightChanged",
+        "type": "ValueChanged"
+      }
+    ]
   },
   "Input": {
     "name": "Input",
@@ -433,12 +571,12 @@
     "parent": "Scrollable",
     "properties": [
       {
-        "name": "initialValue",
-        "type": "String"
+        "name": "key",
+        "type": "GlobalKey"
       },
       {
-        "name": "keyboardType",
-        "type": "KeyboardType"
+        "name": "initialValue",
+        "type": "String"
       },
       {
         "name": "placeholder",
@@ -457,6 +595,10 @@
         "type": "ValueChanged"
       },
       {
+        "name": "keyboardType",
+        "type": "KeyboardType"
+      },
+      {
         "name": "onSubmitted",
         "type": "ValueChanged"
       }
@@ -465,13 +607,27 @@
   "LinearProgressIndicator": {
     "name": "LinearProgressIndicator",
     "package": "material",
-    "parent": "ProgressIndicator"
+    "parent": "ProgressIndicator",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "value",
+        "type": "double"
+      }
+    ]
   },
   "ListItem": {
     "name": "ListItem",
     "package": "material",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "left",
         "type": "Widget"
@@ -501,6 +657,10 @@
     "docs": "Describes a sheet of Material. If the layout changes (e.g. because there's a list on the paper, and it's been scrolled), a LayoutChangedNotification must be dispatched at the relevant subtree. (This in particular means that Transitions should not be placed inside Material.)",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "child",
         "type": "Widget"
       },
@@ -527,6 +687,10 @@
     "package": "material",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "title",
         "type": "String"
@@ -557,6 +721,10 @@
     "docs": "Base class for buttons in the Material theme. Rather than using this class directly, please use FlatButton or RaisedButton.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "child",
         "type": "Widget"
       },
@@ -575,10 +743,6 @@
       {
         "name": "onPressed",
         "type": "VoidCallback"
-      },
-      {
-        "name": "enabled",
-        "type": "bool"
       }
     ]
   },
@@ -587,6 +751,10 @@
     "package": "material",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "initialScrollOffset",
         "type": "double"
@@ -629,6 +797,10 @@
       {
         "name": "lastDate",
         "type": "DateTime"
+      },
+      {
+        "name": "itemExtent",
+        "type": "double"
       }
     ]
   },
@@ -638,12 +810,16 @@
     "parent": "StatelessComponent",
     "properties": [
       {
-        "name": "child",
-        "type": "Widget"
+        "name": "key",
+        "type": "Key"
       },
       {
         "name": "value",
         "type": "T"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -653,6 +829,10 @@
     "parent": "StatefulComponent",
     "abstract": true,
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "value",
         "type": "double"
@@ -664,6 +844,10 @@
     "package": "material",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "value",
         "type": "T"
@@ -688,17 +872,25 @@
     "parent": "MaterialButton",
     "properties": [
       {
-        "name": "color",
-        "type": "Color"
+        "name": "key",
+        "type": "Key"
       },
       {
-        "name": "disabledColor",
+        "name": "child",
+        "type": "Widget"
+      },
+      {
+        "name": "color",
         "type": "Color"
       },
       {
         "name": "colorBrightness",
         "type": "ThemeBrightness",
         "docs": "Controls the default text color if the text color isn't explicit set."
+      },
+      {
+        "name": "disabledColor",
+        "type": "Color"
       },
       {
         "name": "elevation",
@@ -711,6 +903,10 @@
       {
         "name": "disabledElevation",
         "type": "int"
+      },
+      {
+        "name": "onPressed",
+        "type": "VoidCallback"
       }
     ]
   },
@@ -719,6 +915,10 @@
     "package": "material",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "toolBar",
         "type": "ToolBar"
@@ -742,6 +942,10 @@
     "package": "material",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "value",
         "type": "double"
@@ -770,6 +974,10 @@
     "parent": "StatelessComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "content",
         "type": "Widget"
       },
@@ -793,6 +1001,10 @@
     "parent": "StatelessComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "label",
         "type": "String"
       },
@@ -807,6 +1019,10 @@
     "package": "material",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "value",
         "type": "bool"
@@ -828,6 +1044,10 @@
     "docs": "Displays a horizontal row of tabs, one per label. If isScrollable is true then each tab is as wide as needed for its label and the entire [TabBar] is scrollable. Otherwise each tab gets an equal share of the available space. A [TabBarSelection] widget ancestor must have been built to enable saving and monitoring the selected tab.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "labels",
         "type": "Iterable"
       },
@@ -843,6 +1063,10 @@
     "parent": "StatefulComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "index",
         "type": "int"
       },
@@ -851,19 +1075,33 @@
         "type": "int"
       },
       {
-        "name": "child",
-        "type": "Widget"
-      },
-      {
         "name": "onChanged",
         "type": "ValueChanged"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
   "TabBarView": {
     "name": "TabBarView",
     "package": "material",
-    "parent": "PageableList"
+    "parent": "PageableList",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "items",
+        "type": "List"
+      },
+      {
+        "name": "itemBuilder",
+        "type": "ItemBuilder"
+      }
+    ]
   },
   "TimePicker": {
     "name": "TimePicker",
@@ -885,6 +1123,10 @@
     "package": "material",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "left",
         "type": "Widget"
@@ -953,6 +1195,10 @@
     "docs": "Aligns its child box within itself.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "alignment",
         "type": "FractionalOffset",
         "docs": "How to align the child."
@@ -966,6 +1212,10 @@
         "name": "heightFactor",
         "type": "double",
         "docs": "If non-null, sets its height to the child's height multipled by this factor."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -974,6 +1224,10 @@
     "package": "widgets",
     "parent": "TransitionWithChild",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "alignment",
         "type": "AnimatedValue"
@@ -985,6 +1239,14 @@
       {
         "name": "heightFactor",
         "type": "AnimatedValue"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -994,6 +1256,10 @@
     "parent": "StatefulComponent",
     "docs": "A container that gradually changes its values over a period of time.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget"
@@ -1057,6 +1323,10 @@
     "docs": "Prevents the user from interacting with widgets behind itself.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "color",
         "type": "AnimatedColorValue",
         "docs": "If non-null, fill the barrier with this color."
@@ -1080,9 +1350,17 @@
     "docs": "Forces child to layout at a specific aspect ratio.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "aspectRatio",
         "type": "double",
         "docs": "The aspect ratio to use when computing the height from the width."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1092,6 +1370,10 @@
     "parent": "StatelessComponent",
     "docs": "Displays an image from an [AssetBundle].",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "name",
         "type": "String",
@@ -1146,6 +1428,10 @@
     "docs": "Displays an image provided by an [ImageProvider].",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "provider",
         "type": "ImageProvider",
         "docs": "The object that will provide the image."
@@ -1194,6 +1480,10 @@
     "docs": "Positions its child vertically according to the child's baseline.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "baseline",
         "type": "double",
         "docs": "The number of logical pixels from the top of this box at which to position the child's baseline."
@@ -1202,6 +1492,10 @@
         "name": "baselineType",
         "type": "TextBaseline",
         "docs": "The type of baseline to use for positioning the child."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1209,48 +1503,23 @@
     "name": "Block",
     "package": "widgets",
     "parent": "StatelessComponent",
-    "docs": "A mashup of [ScrollableViewport] and [BlockBody]. Useful when you have a small, fixed number of children that you wish to arrange in a block layout and that might exceed the height of its container (and therefore need to scroll).",
-    "properties": [
-      {
-        "name": "children",
-        "type": "List"
-      },
-      {
-        "name": "padding",
-        "type": "EdgeDims"
-      },
-      {
-        "name": "initialScrollOffset",
-        "type": "double"
-      },
-      {
-        "name": "scrollDirection",
-        "type": "ScrollDirection"
-      },
-      {
-        "name": "onScroll",
-        "type": "ScrollListener"
-      }
-    ]
+    "docs": "A mashup of [ScrollableViewport] and [BlockBody]. Useful when you have a small, fixed number of children that you wish to arrange in a block layout and that might exceed the height of its container (and therefore need to scroll)."
   },
   "BlockBody": {
     "name": "BlockBody",
     "package": "widgets",
     "parent": "MultiChildRenderObjectWidget",
-    "docs": "Uses the block layout algorithm for its children.",
-    "properties": [
-      {
-        "name": "direction",
-        "type": "BlockDirection",
-        "docs": "The direction to use as the main axis."
-      }
-    ]
+    "docs": "Uses the block layout algorithm for its children."
   },
   "Builder": {
     "name": "Builder",
     "package": "widgets",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "builder",
         "type": "WidgetBuilder"
@@ -1263,12 +1532,20 @@
     "parent": "TransitionComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "variables",
         "type": "List"
       },
       {
         "name": "builder",
         "type": "WidgetBuilder"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
       }
     ]
   },
@@ -1276,7 +1553,25 @@
     "name": "Center",
     "package": "widgets",
     "parent": "Align",
-    "docs": "Centers its child within itself."
+    "docs": "Centers its child within itself.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "widthFactor",
+        "type": "dynamic"
+      },
+      {
+        "name": "heightFactor",
+        "type": "dynamic"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      }
+    ]
   },
   "ClipOval": {
     "name": "ClipOval",
@@ -1285,9 +1580,17 @@
     "docs": "Clips its child using an oval.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "clipper",
         "type": "CustomClipper",
         "docs": "If non-null, determines which clip to use."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1298,6 +1601,10 @@
     "docs": "Clips its child using a rounded rectangle.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "xRadius",
         "type": "double",
         "docs": "The radius of the rounded corners in the horizontal direction in logical pixels."
@@ -1306,6 +1613,10 @@
         "name": "yRadius",
         "type": "double",
         "docs": "The radius of the rounded corners in the vertical direction in logical pixels."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1316,9 +1627,17 @@
     "docs": "Clips its child using a rectangle.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "clipper",
         "type": "CustomClipper",
         "docs": "If non-null, determines which clip to use."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1328,8 +1647,20 @@
     "parent": "TransitionWithChild",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "color",
         "type": "AnimatedColorValue"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1346,9 +1677,17 @@
     "docs": "Imposes additional constraints on its child.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "constraints",
         "type": "BoxConstraints",
         "docs": "The additional constraints to impose on the child."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1358,6 +1697,10 @@
     "parent": "StatelessComponent",
     "docs": "A convenience widget that combines common painting, positioning, and sizing widgets.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget",
@@ -1409,14 +1752,7 @@
     "name": "CustomMultiChildLayout",
     "package": "widgets",
     "parent": "MultiChildRenderObjectWidget",
-    "docs": "Defers the layout of multiple children to a delegate.",
-    "properties": [
-      {
-        "name": "delegate",
-        "type": "MultiChildLayoutDelegate",
-        "docs": "The delegate that controls the layout of the children."
-      }
-    ]
+    "docs": "Defers the layout of multiple children to a delegate."
   },
   "CustomOneChildLayout": {
     "name": "CustomOneChildLayout",
@@ -1425,8 +1761,16 @@
     "docs": "Defers the layout of its single child to a delegate.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "delegate",
         "type": "OneChildLayoutDelegate"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1437,6 +1781,10 @@
     "docs": "Delegates its painting.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "painter",
         "type": "CustomPainter",
         "docs": "The painter that paints before the children."
@@ -1445,6 +1793,10 @@
         "name": "foregroundPainter",
         "type": "CustomPainter",
         "docs": "The painter that paints after the children."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1455,6 +1807,10 @@
     "docs": "Paints a [Decoration] either before or after its child paints.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "decoration",
         "type": "Decoration",
         "docs": "What decoration to paint."
@@ -1463,6 +1819,10 @@
         "name": "position",
         "type": "DecorationPosition",
         "docs": "Where to paint the box decoration."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1472,6 +1832,10 @@
     "parent": "StatefulComponent",
     "docs": "Can be dismissed by dragging in one or more directions.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget"
@@ -1500,6 +1864,10 @@
     "docs": "Receives data when a [Draggable] widget is dropped.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "builder",
         "type": "DragTargetBuilder",
         "docs": "Called to build the contents of this widget."
@@ -1520,7 +1888,33 @@
     "name": "Draggable",
     "package": "widgets",
     "parent": "DraggableBase",
-    "docs": "Makes its child draggable starting from tap down."
+    "docs": "Makes its child draggable starting from tap down.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "data",
+        "type": "T"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      },
+      {
+        "name": "feedback",
+        "type": "Widget"
+      },
+      {
+        "name": "feedbackOffset",
+        "type": "Offset"
+      },
+      {
+        "name": "dragAnchor",
+        "type": "DragAnchor"
+      }
+    ]
   },
   "DraggableBase": {
     "name": "DraggableBase",
@@ -1529,6 +1923,10 @@
     "abstract": true,
     "docs": "Subclass this component to customize the gesture used to start a drag.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "data",
         "type": "T"
@@ -1559,6 +1957,10 @@
     "package": "widgets",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "value",
         "type": "EditableString"
@@ -1595,6 +1997,10 @@
     "parent": "StatefulComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "child",
         "type": "Widget"
       },
@@ -1627,8 +2033,20 @@
     "parent": "TransitionWithChild",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "opacity",
         "type": "AnimatedValue"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1636,31 +2054,17 @@
     "name": "Flex",
     "package": "widgets",
     "parent": "MultiChildRenderObjectWidget",
-    "docs": "Uses the flex layout algorithm for its children.",
-    "properties": [
-      {
-        "name": "direction",
-        "type": "FlexDirection"
-      },
-      {
-        "name": "justifyContent",
-        "type": "FlexJustifyContent"
-      },
-      {
-        "name": "alignItems",
-        "type": "FlexAlignItems"
-      },
-      {
-        "name": "textBaseline",
-        "type": "TextBaseline"
-      }
-    ]
+    "docs": "Uses the flex layout algorithm for its children."
   },
   "Focus": {
     "name": "Focus",
     "package": "widgets",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "GlobalKey"
+      },
       {
         "name": "autofocus",
         "type": "bool"
@@ -1678,6 +2082,10 @@
     "docs": "Sizes itself to a fraction of the total available space.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "width",
         "type": "double",
         "docs": "If non-null, the factor of the incoming width to use."
@@ -1686,6 +2094,10 @@
         "name": "height",
         "type": "double",
         "docs": "If non-null, the factor of the incoming height to use."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1695,6 +2107,10 @@
     "parent": "StatefulComponent",
     "docs": "A widget that detects gestures.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget"
@@ -1794,19 +2210,17 @@
     "name": "Grid",
     "package": "widgets",
     "parent": "MultiChildRenderObjectWidget",
-    "docs": "Uses the grid layout algorithm for its children.",
-    "properties": [
-      {
-        "name": "maxChildExtent",
-        "type": "double"
-      }
-    ]
+    "docs": "Uses the grid layout algorithm for its children."
   },
   "GridPaper": {
     "name": "GridPaper",
     "package": "widgets",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "color",
         "type": "Color"
@@ -1822,6 +2236,10 @@
     "package": "widgets",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "tag",
         "type": "Object"
@@ -1847,6 +2265,14 @@
     "parent": "OneChildRenderObjectWidget",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      },
+      {
         "name": "ignoring",
         "type": "bool"
       }
@@ -1856,25 +2282,23 @@
     "name": "IndexedStack",
     "package": "widgets",
     "parent": "MultiChildRenderObjectWidget",
-    "docs": "A [Stack] that shows a single child at once.",
-    "properties": [
-      {
-        "name": "index",
-        "type": "int",
-        "docs": "The index of the child to show."
-      },
-      {
-        "name": "alignment",
-        "type": "FractionalOffset",
-        "docs": "How to align the non-positioned children in the stack."
-      }
-    ]
+    "docs": "A [Stack] that shows a single child at once."
   },
   "IntrinsicHeight": {
     "name": "IntrinsicHeight",
     "package": "widgets",
     "parent": "OneChildRenderObjectWidget",
-    "docs": "Sizes its child to the child's intrinsic height."
+    "docs": "Sizes its child to the child's intrinsic height.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      }
+    ]
   },
   "IntrinsicWidth": {
     "name": "IntrinsicWidth",
@@ -1882,6 +2306,10 @@
     "parent": "OneChildRenderObjectWidget",
     "docs": "Sizes its child to the child's intrinsic width.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "stepWidth",
         "type": "double",
@@ -1891,6 +2319,10 @@
         "name": "stepHeight",
         "type": "double",
         "docs": "If non-null, force the child's height to be a multiple of this value."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -1899,6 +2331,10 @@
     "package": "widgets",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget"
@@ -1910,13 +2346,27 @@
     "package": "widgets",
     "parent": "RenderObjectWidget",
     "abstract": true,
-    "docs": "A superclass for RenderObjectWidgets that configure RenderObject subclasses that have no children."
+    "docs": "A superclass for RenderObjectWidgets that configure RenderObject subclasses that have no children.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      }
+    ]
   },
   "Listener": {
     "name": "Listener",
     "package": "widgets",
     "parent": "OneChildRenderObjectWidget",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      },
       {
         "name": "onPointerDown",
         "type": "PointerDownEventListener"
@@ -1943,13 +2393,47 @@
     "name": "LongPressDraggable",
     "package": "widgets",
     "parent": "DraggableBase",
-    "docs": "Makes its child draggable starting from long press."
+    "docs": "Makes its child draggable starting from long press.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "data",
+        "type": "T"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      },
+      {
+        "name": "feedback",
+        "type": "Widget"
+      },
+      {
+        "name": "feedbackOffset",
+        "type": "Offset"
+      },
+      {
+        "name": "dragAnchor",
+        "type": "DragAnchor"
+      }
+    ]
   },
   "MetaData": {
     "name": "MetaData",
     "package": "widgets",
     "parent": "OneChildRenderObjectWidget",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      },
       {
         "name": "metaData",
         "type": "dynamic"
@@ -1962,6 +2446,10 @@
     "parent": "StatelessComponent",
     "docs": "A widget that copies the appearance of another widget.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "original",
         "type": "MimicableHandle",
@@ -1976,6 +2464,10 @@
     "docs": "A widget that can be copied by a [Mimic].",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "child",
         "type": "Widget"
       }
@@ -1986,6 +2478,10 @@
     "package": "widgets",
     "parent": "RenderObjectWidget",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "startOffset",
         "type": "double"
@@ -2019,6 +2515,10 @@
     "docs": "Prevents the user from interacting with widgets behind itself.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "color",
         "type": "Color",
         "docs": "If non-null, fill the barrier with this color."
@@ -2038,6 +2538,10 @@
     "docs": "A superclass for RenderObjectWidgets that configure RenderObject subclasses that have a single list of children. (This superclass only provides the storage for that child list, it doesn't actually provide the updating logic.)",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "children",
         "type": "List"
       }
@@ -2048,6 +2552,10 @@
     "package": "widgets",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "initialRoute",
         "type": "String"
@@ -2063,11 +2571,6 @@
       {
         "name": "observer",
         "type": "NavigatorObserver"
-      },
-      {
-        "name": "defaultRouteName",
-        "type": "String",
-        "mutable": true
       }
     ]
   },
@@ -2077,6 +2580,10 @@
     "parent": "StatelessComponent",
     "docs": "Displays an image loaded from the network.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "src",
         "type": "String",
@@ -2125,6 +2632,10 @@
     "parent": "StatelessComponent",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "child",
         "type": "Widget"
       },
@@ -2138,7 +2649,17 @@
     "name": "OffStage",
     "package": "widgets",
     "parent": "OneChildRenderObjectWidget",
-    "docs": "Lays the child out as if it was in the tree, but without painting anything, without making the child available for hit testing, and without taking any room in the parent."
+    "docs": "Lays the child out as if it was in the tree, but without painting anything, without making the child available for hit testing, and without taking any room in the parent.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      }
+    ]
   },
   "OneChildRenderObjectWidget": {
     "name": "OneChildRenderObjectWidget",
@@ -2147,6 +2668,10 @@
     "abstract": true,
     "docs": "A superclass for RenderObjectWidgets that configure RenderObject subclasses that have a single child slot. (This superclass only provides the storage for that child, it doesn't actually provide the updating logic.)",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget"
@@ -2160,9 +2685,17 @@
     "docs": "Makes its child partially transparent.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "opacity",
         "type": "double",
         "docs": "The fraction to scale the child's alpha value."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2172,6 +2705,10 @@
     "parent": "OneChildRenderObjectWidget",
     "docs": "A render object that imposes different constraints on its child than it gets from its parent, possibly allowing the child to overflow the parent.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "minWidth",
         "type": "double",
@@ -2191,6 +2728,10 @@
         "name": "maxHeight",
         "type": "double",
         "docs": "The maximum height constraint to give the child. Set this to null (the default) to use the constraint from the parent instead."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2200,6 +2741,10 @@
     "parent": "StatefulComponent",
     "docs": "A [Stack] of entries that can be managed independently.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "initialEntries",
         "type": "List",
@@ -2214,9 +2759,17 @@
     "docs": "Insets its child by the given padding.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "padding",
         "type": "EdgeDims",
         "docs": "The amount to pad the child in each dimension."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2225,6 +2778,10 @@
     "package": "widgets",
     "parent": "StatelessComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget"
@@ -2241,6 +2798,38 @@
     "parent": "Scrollable",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "initialScrollOffset",
+        "type": "dynamic"
+      },
+      {
+        "name": "scrollDirection",
+        "type": "ScrollDirection"
+      },
+      {
+        "name": "onScrollStart",
+        "type": "ScrollListener"
+      },
+      {
+        "name": "onScroll",
+        "type": "ScrollListener"
+      },
+      {
+        "name": "onScrollEnd",
+        "type": "ScrollListener"
+      },
+      {
+        "name": "snapOffsetCallback",
+        "type": "SnapOffsetCallback"
+      },
+      {
+        "name": "snapAlignmentOffset",
+        "type": "double"
+      },
+      {
         "name": "items",
         "type": "List"
       },
@@ -2249,12 +2838,12 @@
         "type": "ItemBuilder"
       },
       {
-        "name": "itemsSnapAlignment",
-        "type": "ItemsSnapAlignment"
-      },
-      {
         "name": "itemsWrap",
         "type": "bool"
+      },
+      {
+        "name": "itemsSnapAlignment",
+        "type": "ItemsSnapAlignment"
       },
       {
         "name": "onPageChanged",
@@ -2278,7 +2867,13 @@
     "name": "Placeholder",
     "package": "widgets",
     "parent": "StatefulComponent",
-    "docs": "A widget whose child can be mutated."
+    "docs": "A widget whose child can be mutated.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      }
+    ]
   },
   "PositionedTransition": {
     "name": "PositionedTransition",
@@ -2287,8 +2882,20 @@
     "docs": "Animated version of [Positioned]. Only works if it's the child of a [Stack].",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "rect",
         "type": "AnimatedRelativeRectValue"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2298,6 +2905,10 @@
     "parent": "LeafRenderObjectWidget",
     "docs": "Displays a raw image.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "image",
         "type": "Image",
@@ -2347,6 +2958,10 @@
     "docs": "Displays an [ImageResource].",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "image",
         "type": "ImageResource",
         "docs": "The image to display."
@@ -2395,6 +3010,10 @@
     "docs": "A raw paragraph of text.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "text",
         "type": "TextSpan"
       }
@@ -2425,12 +3044,28 @@
     "package": "widgets",
     "parent": "Widget",
     "abstract": true,
-    "docs": "RenderObjectWidgets provide the configuration for [RenderObjectElement]s, which wrap [RenderObject]s, which provide the actual rendering of the application."
+    "docs": "RenderObjectWidgets provide the configuration for [RenderObjectElement]s, which wrap [RenderObject]s, which provide the actual rendering of the application.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      }
+    ]
   },
   "RepaintBoundary": {
     "name": "RepaintBoundary",
     "package": "widgets",
-    "parent": "OneChildRenderObjectWidget"
+    "parent": "OneChildRenderObjectWidget",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      }
+    ]
   },
   "RotationTransition": {
     "name": "RotationTransition",
@@ -2438,8 +3073,20 @@
     "parent": "TransitionWithChild",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "turns",
         "type": "AnimatedValue"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2456,6 +3103,10 @@
     "abstract": true,
     "docs": "A base class for scrollable widgets that reacts to user input and generates a scrollOffset.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "initialScrollOffset",
         "type": "double"
@@ -2493,12 +3144,52 @@
     "docs": "A wrapper around [ScrollableWidgetList] that helps you translate a list of model objects into a scrollable list of widgets. Assumes all the widgets have the same height.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "initialScrollOffset",
+        "type": "double"
+      },
+      {
+        "name": "scrollDirection",
+        "type": "ScrollDirection"
+      },
+      {
+        "name": "onScroll",
+        "type": "ScrollListener"
+      },
+      {
+        "name": "snapOffsetCallback",
+        "type": "SnapOffsetCallback"
+      },
+      {
+        "name": "snapAlignmentOffset",
+        "type": "double"
+      },
+      {
         "name": "items",
         "type": "List"
       },
       {
         "name": "itemBuilder",
         "type": "ItemBuilder"
+      },
+      {
+        "name": "itemsWrap",
+        "type": "dynamic"
+      },
+      {
+        "name": "itemExtent",
+        "type": "double"
+      },
+      {
+        "name": "padding",
+        "type": "EdgeDims"
+      },
+      {
+        "name": "scrollableListPainter",
+        "type": "ScrollableListPainter"
       }
     ]
   },
@@ -2508,6 +3199,26 @@
     "parent": "Scrollable",
     "docs": "A general scrollable list for a large number of children that might not all have the same height. Prefer [ScrollableWidgetList] when all the children have the same height because it can use that property to be more efficient. Prefer [ScrollableViewport] with a single child.",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "initialScrollOffset",
+        "type": "double"
+      },
+      {
+        "name": "onScroll",
+        "type": "ScrollListener"
+      },
+      {
+        "name": "snapOffsetCallback",
+        "type": "SnapOffsetCallback"
+      },
+      {
+        "name": "snapAlignmentOffset",
+        "type": "double"
+      },
       {
         "name": "builder",
         "type": "IndexedBuilder"
@@ -2529,8 +3240,24 @@
     "docs": "A simple scrollable widget that has a single child. Use this component if you are not worried about offscreen widgets consuming resources.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "child",
         "type": "Widget"
+      },
+      {
+        "name": "initialScrollOffset",
+        "type": "double"
+      },
+      {
+        "name": "scrollDirection",
+        "type": "ScrollDirection"
+      },
+      {
+        "name": "onScroll",
+        "type": "ScrollListener"
       }
     ]
   },
@@ -2541,6 +3268,30 @@
     "abstract": true,
     "docs": "An optimized scrollable widget for a large number of children that are all the same size (extent) in the scrollDirection. For example for ScrollDirection.vertical itemExtent is the height of each item. Use this widget when you have a large number of children or when you are concerned",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "initialScrollOffset",
+        "type": "double"
+      },
+      {
+        "name": "scrollDirection",
+        "type": "ScrollDirection"
+      },
+      {
+        "name": "onScroll",
+        "type": "ScrollListener"
+      },
+      {
+        "name": "snapOffsetCallback",
+        "type": "SnapOffsetCallback"
+      },
+      {
+        "name": "snapAlignmentOffset",
+        "type": "double"
+      },
       {
         "name": "itemsWrap",
         "type": "bool"
@@ -2565,12 +3316,20 @@
     "parent": "OneChildRenderObjectWidget",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "shaderCallback",
         "type": "ShaderCallback"
       },
       {
         "name": "transferMode",
         "type": "TransferMode"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2581,9 +3340,17 @@
     "docs": "Calls [onSizeChanged] whenever the child's layout size changes",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "onSizeChanged",
         "type": "SizeChangedCallback",
         "docs": "The callback to call whenever the child's layout size changes"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2594,6 +3361,10 @@
     "docs": "A box with a specified size.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "width",
         "type": "double",
         "docs": "If non-null, requires the child to have exactly this width."
@@ -2602,6 +3373,10 @@
         "name": "height",
         "type": "double",
         "docs": "If non-null, requires the child to have exactly this height."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2611,8 +3386,16 @@
     "parent": "OneChildRenderObjectWidget",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "size",
         "type": "Size"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2622,8 +3405,20 @@
     "parent": "TransitionWithChild",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "position",
         "type": "AnimatedValue"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2632,6 +3427,10 @@
     "package": "widgets",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "child",
         "type": "Widget"
@@ -2656,12 +3455,24 @@
     "parent": "TransitionWithChild",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "width",
         "type": "AnimatedValue"
       },
       {
         "name": "height",
         "type": "AnimatedValue"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2669,20 +3480,17 @@
     "name": "Stack",
     "package": "widgets",
     "parent": "MultiChildRenderObjectWidget",
-    "docs": "Uses the stack layout algorithm for its children.",
-    "properties": [
-      {
-        "name": "alignment",
-        "type": "FractionalOffset",
-        "docs": "How to align the non-positioned children in the stack."
-      }
-    ]
+    "docs": "Uses the stack layout algorithm for its children."
   },
   "StatefulBuilder": {
     "name": "StatefulBuilder",
     "package": "widgets",
     "parent": "StatefulComponent",
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "builder",
         "type": "StatefulWidgetBuilder"
@@ -2694,14 +3502,26 @@
     "package": "widgets",
     "parent": "Widget",
     "abstract": true,
-    "docs": "StatefulComponents provide the configuration for [StatefulComponentElement]s, which wrap [State]s, which hold mutable state and can dynamically and spontaneously ask to be rebuilt."
+    "docs": "StatefulComponents provide the configuration for [StatefulComponentElement]s, which wrap [State]s, which hold mutable state and can dynamically and spontaneously ask to be rebuilt.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      }
+    ]
   },
   "StatelessComponent": {
     "name": "StatelessComponent",
     "package": "widgets",
     "parent": "Widget",
     "abstract": true,
-    "docs": "StatelessComponents describe a way to compose other Widgets to form reusable parts, which doesn't depend on anything other than the configuration information in the object itself. (For compositions that can change dynamically, e.g. due to having an internal clock-driven state, or depending on some system state, use [StatefulComponent].)"
+    "docs": "StatelessComponents describe a way to compose other Widgets to form reusable parts, which doesn't depend on anything other than the configuration information in the object itself. (For compositions that can change dynamically, e.g. due to having an internal clock-driven state, or depending on some system state, use [StatefulComponent].)",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      }
+    ]
   },
   "StatisticsOverlay": {
     "name": "StatisticsOverlay",
@@ -2717,6 +3537,10 @@
         "name": "rasterizerThreshold",
         "type": "int",
         "docs": "The rasterizer threshold is an integer specifying the number of frame intervals that the rasterizer must miss before it decides that the frame is suitable for capturing an SkPicture trace for further analysis."
+      },
+      {
+        "name": "key",
+        "type": "Key"
       }
     ]
   },
@@ -2726,6 +3550,10 @@
     "parent": "StatefulComponent",
     "abstract": true,
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "performance",
         "type": "PerformanceView"
@@ -2742,6 +3570,10 @@
         "name": "elements",
         "type": "dynamic",
         "docs": "The recursive list of lists that describes the text and style to paint."
+      },
+      {
+        "name": "key",
+        "type": "Key"
       }
     ]
   },
@@ -2749,19 +3581,7 @@
     "name": "Text",
     "package": "widgets",
     "parent": "StatelessComponent",
-    "docs": "A run of text.",
-    "properties": [
-      {
-        "name": "data",
-        "type": "String",
-        "docs": "The text to display."
-      },
-      {
-        "name": "style",
-        "type": "TextStyle",
-        "docs": "If non-null, the style to use for this text."
-      }
-    ]
+    "docs": "A run of text."
   },
   "Title": {
     "name": "Title",
@@ -2770,13 +3590,13 @@
     "docs": "Controls the description of this app in the operating system.",
     "properties": [
       {
-        "name": "child",
-        "type": "Widget"
-      },
-      {
         "name": "title",
         "type": "String",
         "docs": "A one-line description of this app for use in the window manager."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       },
       {
         "name": "color",
@@ -2792,6 +3612,10 @@
     "docs": "Applies a transformation before painting its child.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "transform",
         "type": "Matrix4",
         "docs": "The matrix to transform the child by during painting."
@@ -2805,6 +3629,10 @@
         "name": "alignment",
         "type": "FractionalOffset",
         "docs": "The alignment of the origin, relative to the size of the box."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2814,6 +3642,10 @@
     "parent": "StatefulComponent",
     "abstract": true,
     "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
       {
         "name": "performance",
         "type": "PerformanceView"
@@ -2827,8 +3659,16 @@
     "abstract": true,
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "child",
         "type": "Widget"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
       }
     ]
   },
@@ -2840,8 +3680,8 @@
     "docs": "A widget that has exactly one inflated instance in the tree.",
     "properties": [
       {
-        "name": "currentState",
-        "type": "T"
+        "name": "key",
+        "type": "GlobalKey"
       }
     ]
   },
@@ -2852,6 +3692,10 @@
     "docs": "A widget that's bigger on the inside.",
     "properties": [
       {
+        "name": "key",
+        "type": "Key"
+      },
+      {
         "name": "scrollDirection",
         "type": "ScrollDirection",
         "docs": "The direction in which the child is permitted to be larger than the viewport"
@@ -2860,6 +3704,22 @@
         "name": "scrollOffset",
         "type": "Offset",
         "docs": "The offset at which to paint the child."
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      }
+    ]
+  },
+  "Widget": {
+    "name": "Widget",
+    "package": "widgets",
+    "abstract": true,
+    "docs": "A Widget object describes the configuration for an [Element]. Widget subclasses should be immutable with const constructors. Widgets form a tree that is then inflated into an Element tree.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
       }
     ]
   },
@@ -2867,13 +3727,6 @@
     "name": "WidgetToRenderBoxAdapter",
     "package": "widgets",
     "parent": "LeafRenderObjectWidget",
-    "docs": "An adapter for placing a specific [RenderBox] in the widget tree.",
-    "properties": [
-      {
-        "name": "renderBox",
-        "type": "RenderBox",
-        "docs": "The render box to place in the widget tree."
-      }
-    ]
+    "docs": "An adapter for placing a specific [RenderBox] in the widget tree."
   }
 }

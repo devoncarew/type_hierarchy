@@ -170,7 +170,7 @@ class TypeBuilder {
     // widgets/framework.dart Widget
     FlutterType widget = findType('Widget');
     List<FlutterType> widgets = widget.getPublicDescendants()
-      .toList();
+      .toList()..add(widget);
 
     widgets.sort((FlutterType a, FlutterType b) {
       return a.fullName.compareTo(b.fullName);
@@ -249,14 +249,18 @@ class FlutterType {
   final ClassElement type;
 
   FlutterType _parent;
-  final List<FlutterType> _children = [];
+  List<FlutterType> _children = [];
   List<FlutterProperty> _properties = [];
 
   FlutterType(this.package, this.type) {
-    _properties = type.fields
-      .map((FieldElement field) => new FlutterProperty(field))
-      .where((p) => !p.private)
-      .toList();
+    // Build the properties from the default ctor.
+    ConstructorElement ctor = type.constructors.firstWhere(
+      (ctor) => ctor.isDefaultConstructor, orElse: () => null);
+    if (ctor != null) {
+      _properties = ctor.parameters
+        .map((ParameterElement param) => new FlutterProperty(param))
+        .toList();
+    }
   }
 
   bool get abstract => type.isAbstract;
@@ -301,25 +305,33 @@ class FlutterType {
 }
 
 class FlutterProperty {
-  final FieldElement _field;
+  final ParameterElement _param;
 
-  FlutterProperty(this._field);
+  FlutterProperty(this._param);
 
-  String get name => _field.name;
-  String get type => _field.type.name;
-  bool get isFinal => _field.isFinal;
+  String get name => _param.name;
+  String get type => _param.type.name;
 
-  bool get private => _field.name.startsWith('_');
+  bool get isFinal => _targetField != null ? _targetField.isFinal : true;
 
-  bool get hasDocumentation => _field.documentationComment != null;
+  bool get hasDocumentation =>
+    _targetField != null ? _targetField.documentationComment != null : false;
 
   String get documentation {
-    return _field.documentationComment
+    return _targetField.documentationComment
       .split('\n')
       .map((s) => _removeComments(s))
       .map((s) => s.trim())
       .join('\n')
       .trim();
+  }
+
+  FieldElement get _targetField {
+    if (_param is FieldFormalParameterElement) {
+      return (_param as FieldFormalParameterElement).field;
+    } else {
+      return null;
+    }
   }
 }
 
