@@ -679,10 +679,6 @@
       {
         "name": "onChanged",
         "type": "ValueChanged"
-      },
-      {
-        "name": "_enabled",
-        "type": "bool"
       }
     ]
   },
@@ -1234,10 +1230,6 @@
       {
         "name": "onScroll",
         "type": "ScrollListener"
-      },
-      {
-        "name": "_direction",
-        "type": "BlockDirection"
       }
     ]
   },
@@ -1410,10 +1402,6 @@
         "name": "height",
         "type": "double",
         "docs": "If non-null, requires the decoration to have this height."
-      },
-      {
-        "name": "_paddingIncludingDecoration",
-        "type": "EdgeDims"
       }
     ]
   },
@@ -2614,10 +2602,6 @@
         "name": "height",
         "type": "double",
         "docs": "If non-null, requires the child to have exactly this height."
-      },
-      {
-        "name": "_additionalConstraints",
-        "type": "BoxConstraints"
       }
     ]
   },

@@ -1,6 +1,6 @@
 
-import 'dart:io';
 import 'dart:convert' show JsonEncoder;
+import 'dart:io';
 
 import 'package:analyzer/file_system/file_system.dart' as fileSystem;
 import 'package:analyzer/file_system/physical_file_system.dart';
@@ -18,10 +18,6 @@ import 'package:analyzer/src/generated/source.dart';
 import 'package:analyzer/src/generated/source_io.dart';
 import 'package:cli_util/cli_util.dart' as cli_util;
 import 'package:path/path.dart' as path;
-
-// TODO: emit as a JSON file; include class properties and metadata
-
-// TODO: configurable properties
 
 void main(List<String> args) {
   // This script expects to be run from flutter/type_hierarchy.
@@ -116,6 +112,7 @@ class TypeBuilder {
       }
     });
 
+    print('');
     print('resolving…');
 
     // Ensure that the analysis engine performs all remaining work.
@@ -225,8 +222,6 @@ class TypeBuilder {
       }).toList();
     }
 
-    // TODO: Write children?
-
     return m;
   }
 
@@ -258,9 +253,10 @@ class FlutterType {
   List<FlutterProperty> _properties = [];
 
   FlutterType(this.package, this.type) {
-    _properties = type.fields.map((FieldElement field) {
-      return new FlutterProperty(field);
-    }).toList();
+    _properties = type.fields
+      .map((FieldElement field) => new FlutterProperty(field))
+      .where((p) => !p.private)
+      .toList();
   }
 
   bool get abstract => type.isAbstract;
@@ -312,6 +308,8 @@ class FlutterProperty {
   String get name => _field.name;
   String get type => _field.type.name;
   bool get isFinal => _field.isFinal;
+
+  bool get private => _field.name.startsWith('_');
 
   bool get hasDocumentation => _field.documentationComment != null;
 
