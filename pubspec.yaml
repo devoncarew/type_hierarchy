@@ -4,6 +4,8 @@ description: Emit a Dart class hierarchy as structured data.
 
 dependencies:
  analyzer: ^0.27.0
+ cli_util: ^0.0.1
+ path: ^1.3.0
 
 dev_dependencies:
  test: ^0.12.0
