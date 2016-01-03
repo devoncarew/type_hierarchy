@@ -1748,6 +1748,12 @@
       }
     ]
   },
+  "CustomGrid": {
+    "name": "CustomGrid",
+    "package": "widgets",
+    "parent": "GridRenderObjectWidgetBase",
+    "docs": "Uses the grid layout algorithm for its children."
+  },
   "CustomMultiChildLayout": {
     "name": "CustomMultiChildLayout",
     "package": "widgets",
@@ -1848,7 +1854,7 @@
       {
         "name": "onDismissed",
         "type": "VoidCallback",
-        "docs": "Called when the widget has been dismissed."
+        "docs": "Called when the widget has been dismissed, after finishing resizing."
       },
       {
         "name": "direction",
@@ -2050,6 +2056,12 @@
       }
     ]
   },
+  "FixedColumnCountGrid": {
+    "name": "FixedColumnCountGrid",
+    "package": "widgets",
+    "parent": "GridRenderObjectWidgetBase",
+    "docs": "Uses a grid layout with a fixed column count."
+  },
   "Flex": {
     "name": "Flex",
     "package": "widgets",
@@ -2068,6 +2080,32 @@
       {
         "name": "autofocus",
         "type": "bool"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      }
+    ]
+  },
+  "FractionalTranslation": {
+    "name": "FractionalTranslation",
+    "package": "widgets",
+    "parent": "OneChildRenderObjectWidget",
+    "docs": "Applies a translation expressed as a fraction of the box's size before painting its child.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "translation",
+        "type": "FractionalOffset",
+        "docs": "The offset by which to translate the child, as a multiple of its size."
+      },
+      {
+        "name": "transformHitTests",
+        "type": "bool",
+        "docs": "Whether to apply the translation when performing hit tests."
       },
       {
         "name": "child",
@@ -2206,16 +2244,11 @@
       }
     ]
   },
-  "Grid": {
-    "name": "Grid",
-    "package": "widgets",
-    "parent": "MultiChildRenderObjectWidget",
-    "docs": "Uses the grid layout algorithm for its children."
-  },
   "GridPaper": {
     "name": "GridPaper",
     "package": "widgets",
     "parent": "StatelessComponent",
+    "docs": "Draws a rectalinear grid of 1px width lines at the specified color and interval. Useful with a Stack for visualizing your layout along a grid.",
     "properties": [
       {
         "name": "key",
@@ -2228,6 +2261,22 @@
       {
         "name": "interval",
         "type": "double"
+      }
+    ]
+  },
+  "GridRenderObjectWidgetBase": {
+    "name": "GridRenderObjectWidgetBase",
+    "package": "widgets",
+    "parent": "MultiChildRenderObjectWidget",
+    "abstract": true,
+    "properties": [
+      {
+        "name": "children",
+        "type": "List"
+      },
+      {
+        "name": "key",
+        "type": "Key"
       }
     ]
   },
@@ -2281,7 +2330,7 @@
   "IndexedStack": {
     "name": "IndexedStack",
     "package": "widgets",
-    "parent": "MultiChildRenderObjectWidget",
+    "parent": "StackRenderObjectWidgetBase",
     "docs": "A [Stack] that shows a single child at once."
   },
   "IntrinsicHeight": {
@@ -2420,6 +2469,12 @@
         "type": "DragAnchor"
       }
     ]
+  },
+  "MaxTileWidthGrid": {
+    "name": "MaxTileWidthGrid",
+    "package": "widgets",
+    "parent": "GridRenderObjectWidgetBase",
+    "docs": "Uses a grid layout with a max tile width."
   },
   "MetaData": {
     "name": "MetaData",
@@ -3417,6 +3472,11 @@
         "type": "PerformanceView"
       },
       {
+        "name": "transformHitTests",
+        "type": "bool",
+        "mutable": true
+      },
+      {
         "name": "child",
         "type": "Widget"
       }
@@ -3479,8 +3539,24 @@
   "Stack": {
     "name": "Stack",
     "package": "widgets",
-    "parent": "MultiChildRenderObjectWidget",
+    "parent": "StackRenderObjectWidgetBase",
     "docs": "Uses the stack layout algorithm for its children."
+  },
+  "StackRenderObjectWidgetBase": {
+    "name": "StackRenderObjectWidgetBase",
+    "package": "widgets",
+    "parent": "MultiChildRenderObjectWidget",
+    "abstract": true,
+    "properties": [
+      {
+        "name": "children",
+        "type": "List"
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      }
+    ]
   },
   "StatefulBuilder": {
     "name": "StatefulBuilder",
@@ -3629,6 +3705,11 @@
         "name": "alignment",
         "type": "FractionalOffset",
         "docs": "The alignment of the origin, relative to the size of the box."
+      },
+      {
+        "name": "transformHitTests",
+        "type": "bool",
+        "docs": "Whether to apply the translation when performing hit tests."
       },
       {
         "name": "child",
