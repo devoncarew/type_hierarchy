@@ -710,6 +710,10 @@
       {
         "name": "onLocaleChanged",
         "type": "LocaleChangedCallback"
+      },
+      {
+        "name": "debugShowMaterialGrid",
+        "type": "bool"
       }
     ]
   },
@@ -764,16 +768,12 @@
         "type": "ScrollListener"
       },
       {
-        "name": "items",
-        "type": "List"
-      },
-      {
-        "name": "itemBuilder",
-        "type": "ItemBuilder"
-      },
-      {
         "name": "type",
         "type": "MaterialListType"
+      },
+      {
+        "name": "children",
+        "type": "Iterable"
       }
     ]
   },
@@ -1049,7 +1049,7 @@
       },
       {
         "name": "labels",
-        "type": "Iterable"
+        "type": "Map"
       },
       {
         "name": "isScrollable",
@@ -1067,12 +1067,13 @@
         "type": "Key"
       },
       {
-        "name": "index",
-        "type": "int"
+        "name": "value",
+        "type": "T"
       },
       {
-        "name": "maxIndex",
-        "type": "int"
+        "name": "values",
+        "type": "List",
+        "mutable": true
       },
       {
         "name": "onChanged",
@@ -1099,7 +1100,7 @@
       },
       {
         "name": "itemBuilder",
-        "type": "ItemBuilder"
+        "type": "TabItemBuilder"
       }
     ]
   },
@@ -2261,6 +2262,18 @@
       {
         "name": "interval",
         "type": "double"
+      },
+      {
+        "name": "divisions",
+        "type": "int"
+      },
+      {
+        "name": "subDivisions",
+        "type": "int"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
       }
     ]
   },
@@ -2277,6 +2290,33 @@
       {
         "name": "key",
         "type": "Key"
+      }
+    ]
+  },
+  "GridViewport": {
+    "name": "GridViewport",
+    "package": "widgets",
+    "parent": "VirtualViewport",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "startOffset",
+        "type": "double"
+      },
+      {
+        "name": "delegate",
+        "type": "GridDelegate"
+      },
+      {
+        "name": "onExtentsChanged",
+        "type": "ExtentsChangedCallback"
+      },
+      {
+        "name": "children",
+        "type": "Iterable"
       }
     ]
   },
@@ -2400,6 +2440,49 @@
       {
         "name": "key",
         "type": "Key"
+      }
+    ]
+  },
+  "ListViewport": {
+    "name": "ListViewport",
+    "package": "widgets",
+    "parent": "VirtualViewport",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "onExtentsChanged",
+        "type": "ExtentsChangedCallback"
+      },
+      {
+        "name": "startOffset",
+        "type": "double"
+      },
+      {
+        "name": "scrollDirection",
+        "type": "ScrollDirection"
+      },
+      {
+        "name": "itemExtent",
+        "type": "double"
+      },
+      {
+        "name": "itemsWrap",
+        "type": "bool"
+      },
+      {
+        "name": "padding",
+        "type": "EdgeDims"
+      },
+      {
+        "name": "overlayPainter",
+        "type": "Painter"
+      },
+      {
+        "name": "children",
+        "type": "Iterable"
       }
     ]
   },
@@ -2847,6 +2930,37 @@
       }
     ]
   },
+  "PageViewport": {
+    "name": "PageViewport",
+    "package": "widgets",
+    "parent": "VirtualViewport",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "startOffset",
+        "type": "double"
+      },
+      {
+        "name": "scrollDirection",
+        "type": "ScrollDirection"
+      },
+      {
+        "name": "itemsWrap",
+        "type": "bool"
+      },
+      {
+        "name": "overlayPainter",
+        "type": "Painter"
+      },
+      {
+        "name": "children",
+        "type": "Iterable"
+      }
+    ]
+  },
   "PageableList": {
     "name": "PageableList",
     "package": "widgets",
@@ -2885,14 +2999,6 @@
         "type": "double"
       },
       {
-        "name": "items",
-        "type": "List"
-      },
-      {
-        "name": "itemBuilder",
-        "type": "ItemBuilder"
-      },
-      {
         "name": "itemsWrap",
         "type": "bool"
       },
@@ -2915,6 +3021,10 @@
       {
         "name": "curve",
         "type": "Curve"
+      },
+      {
+        "name": "children",
+        "type": "Iterable"
       }
     ]
   },
@@ -3192,11 +3302,46 @@
       }
     ]
   },
+  "ScrollableGrid": {
+    "name": "ScrollableGrid",
+    "package": "widgets",
+    "parent": "Scrollable",
+    "docs": "A vertically scrollable grid.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "initialScrollOffset",
+        "type": "double"
+      },
+      {
+        "name": "onScroll",
+        "type": "ScrollListener"
+      },
+      {
+        "name": "snapOffsetCallback",
+        "type": "SnapOffsetCallback"
+      },
+      {
+        "name": "snapAlignmentOffset",
+        "type": "double"
+      },
+      {
+        "name": "delegate",
+        "type": "GridDelegate"
+      },
+      {
+        "name": "children",
+        "type": "Iterable"
+      }
+    ]
+  },
   "ScrollableList": {
     "name": "ScrollableList",
     "package": "widgets",
-    "parent": "ScrollableWidgetList",
-    "docs": "A wrapper around [ScrollableWidgetList] that helps you translate a list of model objects into a scrollable list of widgets. Assumes all the widgets have the same height.",
+    "parent": "Scrollable",
     "properties": [
       {
         "name": "key",
@@ -3223,20 +3368,12 @@
         "type": "double"
       },
       {
-        "name": "items",
-        "type": "List"
-      },
-      {
-        "name": "itemBuilder",
-        "type": "ItemBuilder"
+        "name": "itemExtent",
+        "type": "double"
       },
       {
         "name": "itemsWrap",
-        "type": "dynamic"
-      },
-      {
-        "name": "itemExtent",
-        "type": "double"
+        "type": "bool"
       },
       {
         "name": "padding",
@@ -3245,6 +3382,10 @@
       {
         "name": "scrollableListPainter",
         "type": "ScrollableListPainter"
+      },
+      {
+        "name": "children",
+        "type": "Iterable"
       }
     ]
   },
@@ -3791,6 +3932,12 @@
         "type": "Widget"
       }
     ]
+  },
+  "VirtualViewport": {
+    "name": "VirtualViewport",
+    "package": "widgets",
+    "parent": "RenderObjectWidget",
+    "abstract": true
   },
   "Widget": {
     "name": "Widget",
