@@ -1504,13 +1504,56 @@
     "name": "Block",
     "package": "widgets",
     "parent": "StatelessComponent",
-    "docs": "A mashup of [ScrollableViewport] and [BlockBody]. Useful when you have a small, fixed number of children that you wish to arrange in a block layout and that might exceed the height of its container (and therefore need to scroll)."
+    "docs": "A mashup of [ScrollableViewport] and [BlockBody]. Useful when you have a small, fixed number of children that you wish to arrange in a block layout and that might exceed the height of its container (and therefore need to scroll).",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "padding",
+        "type": "EdgeDims"
+      },
+      {
+        "name": "initialScrollOffset",
+        "type": "double"
+      },
+      {
+        "name": "scrollDirection",
+        "type": "ScrollDirection"
+      },
+      {
+        "name": "onScroll",
+        "type": "ScrollListener"
+      }
+    ]
   },
   "BlockBody": {
     "name": "BlockBody",
     "package": "widgets",
     "parent": "MultiChildRenderObjectWidget",
-    "docs": "Uses the block layout algorithm for its children."
+    "docs": "Uses the block layout algorithm for its children.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "direction",
+        "type": "ScrollDirection",
+        "docs": "The direction to use as the main axis."
+      }
+    ]
   },
   "Builder": {
     "name": "Builder",
@@ -1669,7 +1712,30 @@
     "name": "Column",
     "package": "widgets",
     "parent": "Flex",
-    "docs": "Lays out child elements in a column."
+    "docs": "Lays out child elements in a column.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "justifyContent",
+        "type": "dynamic"
+      },
+      {
+        "name": "alignItems",
+        "type": "dynamic"
+      },
+      {
+        "name": "textBaseline",
+        "type": "dynamic"
+      }
+    ]
   },
   "ConstrainedBox": {
     "name": "ConstrainedBox",
@@ -1753,13 +1819,45 @@
     "name": "CustomGrid",
     "package": "widgets",
     "parent": "GridRenderObjectWidgetBase",
-    "docs": "Uses the grid layout algorithm for its children."
+    "docs": "Uses the grid layout algorithm for its children.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "delegate",
+        "type": "GridDelegate",
+        "docs": "The delegate that controls the layout of the children."
+      }
+    ]
   },
   "CustomMultiChildLayout": {
     "name": "CustomMultiChildLayout",
     "package": "widgets",
     "parent": "MultiChildRenderObjectWidget",
-    "docs": "Defers the layout of multiple children to a delegate."
+    "docs": "Defers the layout of multiple children to a delegate.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "delegate",
+        "type": "MultiChildLayoutDelegate",
+        "docs": "The delegate that controls the layout of the children."
+      }
+    ]
   },
   "CustomOneChildLayout": {
     "name": "CustomOneChildLayout",
@@ -2061,13 +2159,66 @@
     "name": "FixedColumnCountGrid",
     "package": "widgets",
     "parent": "GridRenderObjectWidgetBase",
-    "docs": "Uses a grid layout with a fixed column count."
+    "docs": "Uses a grid layout with a fixed column count.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "columnCount",
+        "type": "int",
+        "docs": "The number of columns in the grid."
+      },
+      {
+        "name": "tileAspectRatio",
+        "type": "double",
+        "docs": "The ratio of the width to the height of each tile in the grid."
+      },
+      {
+        "name": "padding",
+        "type": "EdgeDims",
+        "docs": "The amount of padding to apply to each child."
+      }
+    ]
   },
   "Flex": {
     "name": "Flex",
     "package": "widgets",
     "parent": "MultiChildRenderObjectWidget",
-    "docs": "Uses the flex layout algorithm for its children."
+    "docs": "Uses the flex layout algorithm for its children.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "direction",
+        "type": "FlexDirection"
+      },
+      {
+        "name": "justifyContent",
+        "type": "FlexJustifyContent"
+      },
+      {
+        "name": "alignItems",
+        "type": "FlexAlignItems"
+      },
+      {
+        "name": "textBaseline",
+        "type": "TextBaseline"
+      }
+    ]
   },
   "Focus": {
     "name": "Focus",
@@ -2371,7 +2522,28 @@
     "name": "IndexedStack",
     "package": "widgets",
     "parent": "StackRenderObjectWidgetBase",
-    "docs": "A [Stack] that shows a single child at once."
+    "docs": "A [Stack] that shows a single child at once.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "alignment",
+        "type": "FractionalOffset",
+        "docs": "How to align the non-positioned children in the stack."
+      },
+      {
+        "name": "index",
+        "type": "int",
+        "docs": "The index of the child to show."
+      }
+    ]
   },
   "IntrinsicHeight": {
     "name": "IntrinsicHeight",
@@ -2557,7 +2729,33 @@
     "name": "MaxTileWidthGrid",
     "package": "widgets",
     "parent": "GridRenderObjectWidgetBase",
-    "docs": "Uses a grid layout with a max tile width."
+    "docs": "Uses a grid layout with a max tile width.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "maxTileWidth",
+        "type": "double",
+        "docs": "The maximum width of a tile in the grid."
+      },
+      {
+        "name": "tileAspectRatio",
+        "type": "double",
+        "docs": "The ratio of the width to the height of each tile in the grid."
+      },
+      {
+        "name": "padding",
+        "type": "EdgeDims",
+        "docs": "The amount of padding to apply to each child."
+      }
+    ]
   },
   "MetaData": {
     "name": "MetaData",
@@ -3259,7 +3457,30 @@
     "name": "Row",
     "package": "widgets",
     "parent": "Flex",
-    "docs": "Lays out child elements in a row."
+    "docs": "Lays out child elements in a row.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "justifyContent",
+        "type": "dynamic"
+      },
+      {
+        "name": "alignItems",
+        "type": "dynamic"
+      },
+      {
+        "name": "textBaseline",
+        "type": "dynamic"
+      }
+    ]
   },
   "Scrollable": {
     "name": "Scrollable",
@@ -3681,7 +3902,23 @@
     "name": "Stack",
     "package": "widgets",
     "parent": "StackRenderObjectWidgetBase",
-    "docs": "Uses the stack layout algorithm for its children."
+    "docs": "Uses the stack layout algorithm for its children.",
+    "properties": [
+      {
+        "name": "children",
+        "type": "List",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "alignment",
+        "type": "FractionalOffset",
+        "docs": "How to align the non-positioned children in the stack."
+      }
+    ]
   },
   "StackRenderObjectWidgetBase": {
     "name": "StackRenderObjectWidgetBase",
@@ -3798,7 +4035,24 @@
     "name": "Text",
     "package": "widgets",
     "parent": "StatelessComponent",
-    "docs": "A run of text."
+    "docs": "A run of text.",
+    "properties": [
+      {
+        "name": "data",
+        "type": "String",
+        "docs": "The text to display.",
+        "required": true
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "style",
+        "type": "TextStyle",
+        "docs": "If non-null, the style to use for this text."
+      }
+    ]
   },
   "Title": {
     "name": "Title",
@@ -3955,6 +4209,13 @@
     "name": "WidgetToRenderBoxAdapter",
     "package": "widgets",
     "parent": "LeafRenderObjectWidget",
-    "docs": "An adapter for placing a specific [RenderBox] in the widget tree."
+    "docs": "An adapter for placing a specific [RenderBox] in the widget tree.",
+    "properties": [
+      {
+        "name": "renderBox",
+        "type": "RenderBox",
+        "required": true
+      }
+    ]
   }
 }

@@ -16,6 +16,7 @@ import 'package:analyzer/src/generated/sdk.dart';
 import 'package:analyzer/src/generated/sdk_io.dart';
 import 'package:analyzer/src/generated/source.dart';
 import 'package:analyzer/src/generated/source_io.dart';
+import 'package:analyzer/src/generated/utilities_dart.dart';
 import 'package:cli_util/cli_util.dart' as cli_util;
 import 'package:path/path.dart' as path;
 
@@ -218,6 +219,9 @@ class TypeBuilder {
         if (property.hasDocumentation) {
           map['docs'] = _docSummary(property.documentation);
         }
+        if (property.required) {
+          map['required'] = true;
+        }
         return map;
       }).toList();
     }
@@ -254,8 +258,8 @@ class FlutterType {
 
   FlutterType(this.package, this.type) {
     // Build the properties from the default ctor.
-    ConstructorElement ctor = type.constructors.firstWhere(
-      (ctor) => ctor.isDefaultConstructor, orElse: () => null);
+    ConstructorElement ctor = type.constructors.first;
+    // firstWhere((ctor) => ctor.isDefaultConstructor, orElse: () => null);
     if (ctor != null) {
       _properties = ctor.parameters
         .map((ParameterElement param) => new FlutterProperty(param))
@@ -308,6 +312,8 @@ class FlutterProperty {
   final ParameterElement _param;
 
   FlutterProperty(this._param);
+
+  bool get required => _param.parameterKind == ParameterKind.REQUIRED;
 
   String get name => _param.name;
   String get type => _param.type.name;
