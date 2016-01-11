@@ -714,6 +714,10 @@
       {
         "name": "debugShowMaterialGrid",
         "type": "bool"
+      },
+      {
+        "name": "showPerformanceOverlay",
+        "type": "bool"
       }
     ]
   },
@@ -1095,12 +1099,8 @@
         "type": "Key"
       },
       {
-        "name": "items",
+        "name": "children",
         "type": "List"
-      },
-      {
-        "name": "itemBuilder",
-        "type": "TabItemBuilder"
       }
     ]
   },
@@ -1254,7 +1254,7 @@
   "AnimatedContainer": {
     "name": "AnimatedContainer",
     "package": "widgets",
-    "parent": "StatefulComponent",
+    "parent": "AnimatedWidgetBase",
     "docs": "A container that gradually changes its values over a period of time.",
     "properties": [
       {
@@ -1307,13 +1307,11 @@
       },
       {
         "name": "curve",
-        "type": "Curve",
-        "docs": "The curve to apply when animating the parameters of this container."
+        "type": "Curve"
       },
       {
         "name": "duration",
-        "type": "Duration",
-        "docs": "The duration over which to animate the parameters of this container."
+        "type": "Duration"
       }
     ]
   },
@@ -1341,6 +1339,83 @@
         "name": "dismissable",
         "type": "bool",
         "docs": "Whether touching the barrier will pop the current route off the [Navigator]."
+      }
+    ]
+  },
+  "AnimatedPositioned": {
+    "name": "AnimatedPositioned",
+    "package": "widgets",
+    "parent": "AnimatedWidgetBase",
+    "docs": "Animated version of [Positioned] which automatically transitions the child's position over a given duration whenever the given positon changes.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      },
+      {
+        "name": "left",
+        "type": "double",
+        "docs": "The offset of the child's left edge from the left of the stack."
+      },
+      {
+        "name": "top",
+        "type": "double",
+        "docs": "The offset of the child's top edge from the top of the stack."
+      },
+      {
+        "name": "right",
+        "type": "double",
+        "docs": "The offset of the child's right edge from the right of the stack."
+      },
+      {
+        "name": "bottom",
+        "type": "double",
+        "docs": "The offset of the child's bottom edge from the bottom of the stack."
+      },
+      {
+        "name": "width",
+        "type": "double",
+        "docs": "The child's width."
+      },
+      {
+        "name": "height",
+        "type": "double",
+        "docs": "The child's height."
+      },
+      {
+        "name": "curve",
+        "type": "Curve"
+      },
+      {
+        "name": "duration",
+        "type": "Duration"
+      }
+    ]
+  },
+  "AnimatedWidgetBase": {
+    "name": "AnimatedWidgetBase",
+    "package": "widgets",
+    "parent": "StatefulComponent",
+    "abstract": true,
+    "docs": "An abstract widget for building components that gradually change their values over a period of time.",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "curve",
+        "type": "Curve",
+        "docs": "The curve to apply when animating the parameters of this container."
+      },
+      {
+        "name": "duration",
+        "type": "Duration",
+        "docs": "The duration over which to animate the parameters of this container."
       }
     ]
   },
@@ -1525,7 +1600,7 @@
       },
       {
         "name": "scrollDirection",
-        "type": "ScrollDirection"
+        "type": "Axis"
       },
       {
         "name": "onScroll",
@@ -1540,17 +1615,16 @@
     "docs": "Uses the block layout algorithm for its children.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
       },
       {
+        "name": "children",
+        "type": "List"
+      },
+      {
         "name": "direction",
-        "type": "ScrollDirection",
+        "type": "Axis",
         "docs": "The direction to use as the main axis."
       }
     ]
@@ -1715,13 +1789,12 @@
     "docs": "Lays out child elements in a column.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
+      },
+      {
+        "name": "children",
+        "type": "List"
       },
       {
         "name": "justifyContent",
@@ -1775,8 +1848,7 @@
       },
       {
         "name": "constraints",
-        "type": "BoxConstraints",
-        "docs": "Additional constraints to apply to the child."
+        "type": "BoxConstraints"
       },
       {
         "name": "decoration",
@@ -1805,13 +1877,11 @@
       },
       {
         "name": "width",
-        "type": "double",
-        "docs": "If non-null, requires the decoration to have this width."
+        "type": "double"
       },
       {
         "name": "height",
-        "type": "double",
-        "docs": "If non-null, requires the decoration to have this height."
+        "type": "double"
       }
     ]
   },
@@ -1822,13 +1892,12 @@
     "docs": "Uses the grid layout algorithm for its children.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
+      },
+      {
+        "name": "children",
+        "type": "List"
       },
       {
         "name": "delegate",
@@ -1844,13 +1913,12 @@
     "docs": "Defers the layout of multiple children to a delegate.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
+      },
+      {
+        "name": "children",
+        "type": "List"
       },
       {
         "name": "delegate",
@@ -2162,13 +2230,12 @@
     "docs": "Uses a grid layout with a fixed column count.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
+      },
+      {
+        "name": "children",
+        "type": "List"
       },
       {
         "name": "columnCount",
@@ -2194,13 +2261,12 @@
     "docs": "Uses the flex layout algorithm for its children.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
+      },
+      {
+        "name": "children",
+        "type": "List"
       },
       {
         "name": "direction",
@@ -2525,13 +2591,12 @@
     "docs": "A [Stack] that shows a single child at once.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
+      },
+      {
+        "name": "children",
+        "type": "List"
       },
       {
         "name": "alignment",
@@ -2634,7 +2699,7 @@
       },
       {
         "name": "scrollDirection",
-        "type": "ScrollDirection"
+        "type": "Axis"
       },
       {
         "name": "itemExtent",
@@ -2732,13 +2797,12 @@
     "docs": "Uses a grid layout with a max tile width.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
+      },
+      {
+        "name": "children",
+        "type": "List"
       },
       {
         "name": "maxTileWidth",
@@ -2824,7 +2888,7 @@
       },
       {
         "name": "direction",
-        "type": "ScrollDirection"
+        "type": "Axis"
       },
       {
         "name": "builder",
@@ -3143,7 +3207,7 @@
       },
       {
         "name": "scrollDirection",
-        "type": "ScrollDirection"
+        "type": "Axis"
       },
       {
         "name": "itemsWrap",
@@ -3174,7 +3238,7 @@
       },
       {
         "name": "scrollDirection",
-        "type": "ScrollDirection"
+        "type": "Axis"
       },
       {
         "name": "onScrollStart",
@@ -3226,6 +3290,27 @@
       }
     ]
   },
+  "PerformanceOverlay": {
+    "name": "PerformanceOverlay",
+    "package": "widgets",
+    "parent": "LeafRenderObjectWidget",
+    "docs": "Displays performance statistics.",
+    "properties": [
+      {
+        "name": "optionsMask",
+        "type": "int"
+      },
+      {
+        "name": "rasterizerThreshold",
+        "type": "int",
+        "docs": "The rasterizer threshold is an integer specifying the number of frame intervals that the rasterizer must miss before it decides that the frame is suitable for capturing an SkPicture trace for further analysis."
+      },
+      {
+        "name": "key",
+        "type": "Key"
+      }
+    ]
+  },
   "Placeholder": {
     "name": "Placeholder",
     "package": "widgets",
@@ -3242,7 +3327,7 @@
     "name": "PositionedTransition",
     "package": "widgets",
     "parent": "TransitionWithChild",
-    "docs": "Animated version of [Positioned]. Only works if it's the child of a [Stack].",
+    "docs": "Animated version of [Positioned] which takes a specific [AnimatedRelativeRectValue] and a [PerformanceView] to transition the child's position from a start position to and end position over the lifetime of the performance.",
     "properties": [
       {
         "name": "key",
@@ -3460,13 +3545,12 @@
     "docs": "Lays out child elements in a row.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
+      },
+      {
+        "name": "children",
+        "type": "List"
       },
       {
         "name": "justifyContent",
@@ -3499,7 +3583,7 @@
       },
       {
         "name": "scrollDirection",
-        "type": "ScrollDirection"
+        "type": "Axis"
       },
       {
         "name": "onScrollStart",
@@ -3574,7 +3658,7 @@
       },
       {
         "name": "scrollDirection",
-        "type": "ScrollDirection"
+        "type": "Axis"
       },
       {
         "name": "onScroll",
@@ -3670,7 +3754,7 @@
       },
       {
         "name": "scrollDirection",
-        "type": "ScrollDirection"
+        "type": "Axis"
       },
       {
         "name": "onScroll",
@@ -3695,7 +3779,7 @@
       },
       {
         "name": "scrollDirection",
-        "type": "ScrollDirection"
+        "type": "Axis"
       },
       {
         "name": "onScroll",
@@ -3905,13 +3989,12 @@
     "docs": "Uses the stack layout algorithm for its children.",
     "properties": [
       {
-        "name": "children",
-        "type": "List",
-        "required": true
-      },
-      {
         "name": "key",
         "type": "Key"
+      },
+      {
+        "name": "children",
+        "type": "List"
       },
       {
         "name": "alignment",
@@ -3971,27 +4054,6 @@
     "abstract": true,
     "docs": "StatelessComponents describe a way to compose other Widgets to form reusable parts, which doesn't depend on anything other than the configuration information in the object itself. (For compositions that can change dynamically, e.g. due to having an internal clock-driven state, or depending on some system state, use [StatefulComponent].)",
     "properties": [
-      {
-        "name": "key",
-        "type": "Key"
-      }
-    ]
-  },
-  "StatisticsOverlay": {
-    "name": "StatisticsOverlay",
-    "package": "widgets",
-    "parent": "LeafRenderObjectWidget",
-    "docs": "Displays performance statistics.",
-    "properties": [
-      {
-        "name": "optionsMask",
-        "type": "int"
-      },
-      {
-        "name": "rasterizerThreshold",
-        "type": "int",
-        "docs": "The rasterizer threshold is an integer specifying the number of frame intervals that the rasterizer must miss before it decides that the frame is suitable for capturing an SkPicture trace for further analysis."
-      },
       {
         "name": "key",
         "type": "Key"
@@ -4173,7 +4235,7 @@
       },
       {
         "name": "scrollDirection",
-        "type": "ScrollDirection",
+        "type": "Axis",
         "docs": "The direction in which the child is permitted to be larger than the viewport"
       },
       {
