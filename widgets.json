@@ -3566,6 +3566,33 @@
       }
     ]
   },
+  "ScaleTransition": {
+    "name": "ScaleTransition",
+    "package": "widgets",
+    "parent": "TransitionWithChild",
+    "properties": [
+      {
+        "name": "key",
+        "type": "Key"
+      },
+      {
+        "name": "scale",
+        "type": "AnimatedValue"
+      },
+      {
+        "name": "alignment",
+        "type": "FractionalOffset"
+      },
+      {
+        "name": "performance",
+        "type": "PerformanceView"
+      },
+      {
+        "name": "child",
+        "type": "Widget"
+      }
+    ]
+  },
   "Scrollable": {
     "name": "Scrollable",
     "package": "widgets",
@@ -4275,8 +4302,12 @@
     "properties": [
       {
         "name": "renderBox",
-        "type": "RenderBox",
-        "required": true
+        "type": "RenderBox"
+      },
+      {
+        "name": "onBuild",
+        "type": "VoidCallback",
+        "docs": "Called when it is safe to update the render box and its descendants. If you update the RenderObject subtree under this widget outside of invocations of this callback, features like hit-testing will fail as the tree will be dirty."
       }
     ]
   }
